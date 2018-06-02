@@ -1,0 +1,24 @@
+<div ng-controller="screen03Controller">
+    <div class="screenBg">
+        <div class="exercise">
+            <p class="text">"Tak" i "nie" to najczęście używane odpowiedzi na różne pytania. Jak zatem odpowiadać po czesku?</p>
+            <div>
+                <ul lang="cs-CZ" xml:lang="cs-CZ">
+                    <li ng-repeat="answear in answears">{{answear}}</li>
+                </ul>
+                <ul>
+                    <li ng-repeat="planswear in planswears">{{planswear}}</li>
+                </ul>
+            </div>
+            <p>Teraz sprawdźmy, w jaki sposób powiedzieć "proszę", "dziękuję" i "przepraszam".</p>
+            <div>
+                <ul lang="cs-CZ" xml:lang="cs-CZ">
+                    <li ng-repeat="behaviour in behaviours">{{behaviour}}</li>
+                </ul>
+                <ul>
+                    <li ng-repeat="plbehaviour in plbehaviours">{{plbehaviour}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<div ng-controller="screen06Controller">
+    <div class="screenBg">
+        <div class="exercise">
+            <p class="text">Dopasuj prawidłowe tłumaczenie do frazy, wpisując odpowiednią literę.</p>
+            <div>
+
+                <div class="czechWords">
+                    <div>
+                        <p>
+                            <span lang="cs-CZ" xml:lang="cs-CZ">Dobré ráno</span>
+                            <span class="letter">A</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="czechWords">
+                    <div>
+                        <p>
+                            <span lang="cs-CZ" xml:lang="cs-CZ">Ahoj</span>
+                            <span class="letter">B</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="czechWords">
+                    <div>
+                        <p>
+                            <span lang="cs-CZ" xml:lang="cs-CZ">Omlouvám se</span>
+                            <span class="letter">C</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="czechWords">
+                    <div>
+                        <p>
+                            <span lang="cs-CZ" xml:lang="cs-CZ">Jmenuji se</span>
+                            <span class="letter">D</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="czechWords">
+                    <div>
+                        <p>
+                            <span lang="cs-CZ" xml:lang="cs-CZ">Dobrou noc</span>
+                            <span class="letter">E</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="poslishWords">
+                    <div>
+                        <p>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <span>Nazywam się</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="poslishWords">
+                    <div>
+                        <p>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <span>Przepraszam</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="poslishWords">
+                    <div>
+                        <p>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <span>Dobranoc</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="poslishWords">
+                    <div>
+                        <p>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <span>Dzień dobry</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="poslishWords">
+                    <div>
+                        <p>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <span>Cześć</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <button class="submit" ng-click="checkExercise()">Sprawdź</button>
+                <p>Twój wynik to: {{points}}</p>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div ng-controller="screen02Controller">
+    <div class="screenBg">
+        <div class="exercise">
+            <p class="text">Cześć! Dzień dobry! Dobry wieczór! W Czechach możesz przywitać się na wiele sposobów. Oto niektóre z nich:</p>
+            <div>
+                <ul lang="cs-CZ" xml:lang="cs-CZ">
+                    <li ng-repeat="greeting in greetings">{{greeting}}</li>
+                </ul>
+                <ul>
+                    <li ng-repeat="plgreeting in plgreetings">{{plgreeting}}</li>
+                </ul>
+            </div>
+            <p>Na do widzenia możemy powiedzieć:</p>
+            <div>
+                <ul lang="cs-CZ" xml:lang="cs-CZ">
+                    <li ng-repeat="goodbye in goodbyes">{{goodbye}}</li>
+                </ul>
+                <ul>
+                    <li ng-repeat="plgoodbye in plgoodbyes">{{plgoodbye}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

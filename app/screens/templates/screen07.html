@@ -1,0 +1,23 @@
+<div ng-controller="screen07Controller">
+    <div class="screenBg">
+        <div class="exercise">
+            <p class="text">Czy odpowiedź na pytanie jest prawidłowa? Wybierz opcję "prawda" dla dobrej odpowiedzi lub "fałsz" dla błędnej.</p>
+
+            <div class="sentence" ng-repeat="sentence in sentences">
+                <p class="question" lang="cs-CZ" xml:lang="cs-CZ">{{sentence.question}}</p>
+                <p class="answear" lang="cs-CZ" xml:lang="cs-CZ">{{sentence.answear}}</p>
+                    <label>
+                        <input type="radio" name={{sentence.name}} class="checkingPoints" value="true">prawda
+                    </label>
+                    <label>
+                        <input type="radio" name={{sentence.name}} class="checkingPoints" value="false">fałsz
+                    </label>
+            </div>
+
+            <button class="submit" ng-click="checkExercise()">Sprawdź</button>
+            <p>Twój wynik to: {{points}}</p>
+
+        </div>
+    </div>
+</div>
+        
