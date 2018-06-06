@@ -7,14 +7,14 @@
                 <p class="question" lang="cs-CZ" xml:lang="cs-CZ">{{sentence.question}}</p>
                 <p class="answear" lang="cs-CZ" xml:lang="cs-CZ">{{sentence.answear}}</p>
                     <label>
-                        <input type="radio" name={{sentence.name}} class="checkingPoints" value="true">prawda
+                        <input type="radio" ng-click="checkSubmit()" name={{sentence.name}} class="checkingPoints" value="true">prawda
                     </label>
                     <label>
-                        <input type="radio" name={{sentence.name}} class="checkingPoints" value="false">fałsz
+                        <input type="radio" ng-click="checkSubmit()" name={{sentence.name}} class="checkingPoints" value="false">fałsz
                     </label>
             </div>
 
-            <button class="submit" ng-click="checkExercise()">Sprawdź</button>
+            <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
             <p>Twój wynik to: {{points}}</p>
 
         </div>

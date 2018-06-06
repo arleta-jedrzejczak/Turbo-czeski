@@ -48,7 +48,7 @@
                 <div class="poslishWords">
                     <div>
                         <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
                             <span>Nazywam się</span>
                         </p>
                     </div>
@@ -56,7 +56,7 @@
                 <div class="poslishWords">
                     <div>
                         <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
                             <span>Przepraszam</span>
                         </p>
                     </div>
@@ -64,7 +64,7 @@
                 <div class="poslishWords">
                     <div>
                         <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
                             <span>Dobranoc</span>
                         </p>
                     </div>
@@ -72,7 +72,7 @@
                 <div class="poslishWords">
                     <div>
                         <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
                             <span>Dzień dobry</span>
                         </p>
                     </div>
@@ -80,13 +80,13 @@
                 <div class="poslishWords">
                     <div>
                         <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)"/>
+                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
                             <span>Cześć</span>
                         </p>
                     </div>
                 </div>
                 
-                <button class="submit" ng-click="checkExercise()">Sprawdź</button>
+                <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
                 <p>Twój wynik to: {{points}}</p>
 
             </div>

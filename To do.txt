@@ -1,0 +1,1 @@
+poprawic ekran 6: umozliwic wpisanie jednego znaku bez blokowania inputa

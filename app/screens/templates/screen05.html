@@ -1,0 +1,20 @@
+<div ng-controller="screen05Controller">
+    <div class="screenBg">
+        <div class="exercise">
+            <p class="text">Wypróbuj nowe słówka w ćwiczeniach. Umieść wyrażenia w prawidłowych kategoriach.</p>
+
+            <div class="dragables" ng-repeat="drag in drags"  draggable="true">
+                <p class="drag" lang="cs-CZ" xml:lang="cs-CZ">{{drag.name}}</p>
+            </div>
+
+            <div class="holders" ng-repeat="holder in holders" style="width:400px; height: 100px; border: 1px solid black">
+                <p class="holder">{{holder}}</p>
+            </div>
+
+            <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
+            <p>Twój wynik to: {{points}}</p>
+
+        </div>
+    </div>
+</div>
+        
