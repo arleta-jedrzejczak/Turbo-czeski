@@ -1,5 +1,7 @@
 myApp.controller('screen05Controller', ['$scope', function($scope){
 
+    $scope.currentScreen = 5;
+
     $scope.drags = [
         {title: "dobré odpoledne", category: "greetings", name: "d1"},
         {title: "čau", category: "goodbyes", name: "d2"},
@@ -10,7 +12,7 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
         {title: "na shledanou", category: "goodbyes", name: "d7"}
     ]
 
-    $scope.checkingPoints = document.getElementsByClassName('checkingPoints');
+    $scope.checkButton = document.getElementsByClassName('checkButton');
     $scope.points = 0;
     $scope.disableBtn = true;
 
@@ -28,34 +30,34 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
             }
         }
         
-        $scope.points = 0;
+        $scope.helperPoints = 0;
         $scope.countArray = [];
         
-        // for(var i = 0; i < $scope.checkingPoints.length; i++) {
-        //     if($scope.checkingPoints[i].checked == true) {
-        //         $scope.countArray.push($scope.checkingPoints[i]);
-        //         $scope.points++;
-        //     }
-        // }
+        for(var i = 0; i < $scope.checkButton.length; i++) {
+            if($scope.checkButton[i].checked == true) {
+                $scope.countArray.push($scope.checkButton[i]);
+                $scope.helperPoints++;
+            }
+        }
 
-        // if($scope.points == $scope.sentences.length) {
-        //     $scope.disableBtn = false;
-        // }
+        if($scope.helperPoints == $scope.drags.length) {
+            $scope.disableBtn = false;
+        }
 
     }
 
-    // $scope.checkExercise = function() {
+    $scope.checkExercise = function() {
 
-    //     for(var i = 0; i < $scope.helperArray.length; i++) {
-    //         if($scope.helperArray[i].value == $scope.sentences[i].result) {
-    //             console.log('Done!');
-    //             $scope.points++;
-    //         }
-    //         else {
-    //             console.log('Wrong!');
-    //         }
-    //     }
-        
-    // }
+        for(var i = 0; i < $scope.countArray.length; i++) {
+            if($scope.countArray[i].id == $scope.drags[i].category) {
+                console.log('Done!');
+                $scope.points++;
+            }
+            else {
+                console.log('Wrong!');
+            }
+        }
+        $scope.checkTotalPoints($scope.points, $scope.currentScreen);
+    }
 
 }]);

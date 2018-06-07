@@ -1,5 +1,5 @@
 myApp.controller('screen01Controller', ['$scope', function($scope){
 
-    $scope.points;
+    $scope.currentScreen = 9;
 
 }]);

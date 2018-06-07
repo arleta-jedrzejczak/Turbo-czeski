@@ -1,5 +1,7 @@
 myApp.controller('screen06Controller', ['$scope', function($scope){
 
+    $scope.currentScreen = 6;
+
     $scope.points = 0;
     $scope.inputs = document.getElementsByClassName('input');
     $scope.results = ["D", "C", "E", "A", "B"];
@@ -22,7 +24,6 @@ myApp.controller('screen06Controller', ['$scope', function($scope){
                 helperPoints++;
             }
         }
-        console.log(helperPoints);
         
         if(helperPoints == $scope.results.length) {
             $scope.disableBtn = false;
@@ -42,6 +43,7 @@ myApp.controller('screen06Controller', ['$scope', function($scope){
                 console.log('Wrong!');
             }
         }
+        $scope.checkTotalPoints($scope.points, $scope.currentScreen);
     }
 
 }]);

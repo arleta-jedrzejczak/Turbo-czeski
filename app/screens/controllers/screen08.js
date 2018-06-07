@@ -1,5 +1,7 @@
 myApp.controller('screen08Controller', ['$scope', function($scope){
 
+    $scope.currentScreen = 8;
+
     $scope.words = ["jmenujes", "jmenuji", "odkud", "mluvim", "jsem", "dekuji", "shledanou"];
     $scope.wordsCzech = ["jmenuješ", "jmenuji", "odkud", "mluvím", "jsem", "děkuji", "shledanou"];
 
@@ -43,6 +45,7 @@ myApp.controller('screen08Controller', ['$scope', function($scope){
                 console.log('Wrong!');
             }
         }
+        $scope.checkTotalPoints($scope.points, $scope.currentScreen);
     }
 
 }]);

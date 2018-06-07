@@ -42,10 +42,24 @@ myApp.config(['$routeProvider', function($routeProvider){
 
 myApp.controller('appController', ['$scope', '$location', function($scope, $location){
 
-    $scope.words = ['dobre reno', 'dobry den', 'dobre odpoledne', 'ahoj'];
-    
-    $scope.location = function() {
-        console.log($location.$$absUrl);
+    $scope.checkTotalPoints = function(points, screen) {
+
+        $scope.totalPoints = 0;
+        $scope.allScreens = 9;
+        $scope.countedScreens = [];
+
+        for(var i = 0; i < $scope.allScreens; i++) {
+            console.log("Fiz");
+            if($scope.countedScreens[i] != screen) {
+                console.log("Buz");
+                if(points) {
+                    console.log("FizBuz");
+                    $scope.countedScreens.push(screen);
+                    $scope.totalPoints += points;
+                }
+            }
+        }
+        console.log($scope.countedScreens, $scope.totalPoints);
     }
 
 }]);

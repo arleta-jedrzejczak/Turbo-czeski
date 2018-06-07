@@ -1,5 +1,7 @@
 myApp.controller('screen07Controller', ['$scope', function($scope){
 
+    $scope.currentScreen = 8;
+
     $scope.sentences = [
         {question: "Mluvíš český?", answear: "Mluvím anglicky.", name: "q1", result: "false"},
         {question: "Jak se jmenuješ?", answear: "Jmenuji se Anna.", name: "q2", result: "true"},
@@ -12,17 +14,17 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
 
     $scope.checkSubmit = function() {
         
-        $scope.points = 0;
+        $scope.helperPoints = 0;
         $scope.helperArray = [];
         
         for(var i = 0; i < $scope.checkingPoints.length; i++) {
             if($scope.checkingPoints[i].checked == true) {
                 $scope.helperArray.push($scope.checkingPoints[i]);
-                $scope.points++;
+                $scope.helperPoints++;
             }
         }
 
-        if($scope.points == $scope.sentences.length) {
+        if($scope.helperPoints == $scope.sentences.length) {
             $scope.disableBtn = false;
         }
 
@@ -39,7 +41,7 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
                 console.log('Wrong!');
             }
         }
-        
+        $scope.checkTotalPoints($scope.points, $scope.currentScreen);
     }
 
 }]);
