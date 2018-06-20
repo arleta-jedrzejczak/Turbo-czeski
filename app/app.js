@@ -42,24 +42,31 @@ myApp.config(['$routeProvider', function($routeProvider){
 
 myApp.controller('appController', ['$scope', '$location', function($scope, $location){
 
-    $scope.checkTotalPoints = function(points, screen) {
+    this.$onInit = function() {
+        // let allPoints = [
+        //     { screen: 1, points: null },
+        //     { screen: 2, points: null },
+        //     { screen: 3, points: null },
+        //     { screen: 4, points: null },
+        //     { screen: 5, points: 0 },
+        //     { screen: 6, points: 0 },
+        //     { screen: 7, points: 0 },
+        //     { screen: 8, points: 0 },
+        //     { screen: 9, points: null }
+        // ]
+        // localStorage.setItem("allP", allPoints);
+    }
 
-        $scope.totalPoints = 0;
-        $scope.allScreens = 9;
-        $scope.countedScreens = [];
+    $scope.nextScreen = function() {
 
-        for(var i = 0; i < $scope.allScreens; i++) {
-            console.log("Fiz");
-            if($scope.countedScreens[i] != screen) {
-                console.log("Buz");
-                if(points) {
-                    console.log("FizBuz");
-                    $scope.countedScreens.push(screen);
-                    $scope.totalPoints += points;
-                }
-            }
-        }
-        console.log($scope.countedScreens, $scope.totalPoints);
+    }
+
+    $scope.prevScreen = function() {
+
+    }
+
+    $scope.checkTotalPoints = function(points, screen) { 
+        console.log(points, screen);
     }
 
 }]);

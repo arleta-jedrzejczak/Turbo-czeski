@@ -1,6 +1,6 @@
 myApp.controller('screen07Controller', ['$scope', function($scope){
 
-    $scope.currentScreen = 8;
+    let currentScreen = 8;
 
     $scope.sentences = [
         {question: "Mluvíš český?", answear: "Mluvím anglicky.", name: "q1", result: "false"},
@@ -8,23 +8,23 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
         {question: "Odkud jsi?", answear: "Omlouvám se.", name: "q3", result: "false"}
     ]
 
-    $scope.checkingPoints = document.getElementsByClassName('checkingPoints');
-    $scope.points = 0;
+    const checkingPoints = document.getElementsByClassName('checkingPoints');
+    let points = 0;
     $scope.disableBtn = true;
 
     $scope.checkSubmit = function() {
         
-        $scope.helperPoints = 0;
-        $scope.helperArray = [];
+        let helperPoints = 0;
+        let helperArray = [];
         
-        for(var i = 0; i < $scope.checkingPoints.length; i++) {
-            if($scope.checkingPoints[i].checked == true) {
-                $scope.helperArray.push($scope.checkingPoints[i]);
-                $scope.helperPoints++;
+        for(var i = 0; i < checkingPoints.length; i++) {
+            if(checkingPoints[i].checked == true) {
+                helperArray.push(checkingPoints[i]);
+                helperPoints++;
             }
         }
 
-        if($scope.helperPoints == $scope.sentences.length) {
+        if(helperPoints == $scope.sentences.length) {
             $scope.disableBtn = false;
         }
 
@@ -32,16 +32,16 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
 
     $scope.checkExercise = function() {
 
-        for(var i = 0; i < $scope.helperArray.length; i++) {
-            if($scope.helperArray[i].value == $scope.sentences[i].result) {
+        for(var i = 0; i < helperArray.length; i++) {
+            if(helperArray[i].value == $scope.sentences[i].result) {
                 console.log('Done!');
-                $scope.points++;
+                points++;
             }
             else {
                 console.log('Wrong!');
             }
         }
-        $scope.checkTotalPoints($scope.points, $scope.currentScreen);
+        $scope.checkTotalPoints(points, currentScreen);
     }
 
 }]);

@@ -1,12 +1,12 @@
 myApp.controller('screen08Controller', ['$scope', function($scope){
 
-    $scope.currentScreen = 8;
+    let currentScreen = 8;
 
     $scope.words = ["jmenujes", "jmenuji", "odkud", "mluvim", "jsem", "dekuji", "shledanou"];
     $scope.wordsCzech = ["jmenuješ", "jmenuji", "odkud", "mluvím", "jsem", "děkuji", "shledanou"];
 
     $scope.disableBtn = true;
-    $scope.inputs = document.getElementsByClassName('words');
+    const inputs = document.getElementsByClassName('words');
 
     $scope.countLetters = function(event) {
 
@@ -20,8 +20,8 @@ myApp.controller('screen08Controller', ['$scope', function($scope){
 
         var helperPoints = 0;
 
-        for(var i = 0; i < $scope.inputs.length; i++) {
-            if($scope.inputs[i].value.length == $scope.inputs[i].name.length) {
+        for(var i = 0; i < inputs.length; i++) {
+            if(inputs[i].value.length == inputs[i].name.length) {
                 helperPoints++;
             }
         }
@@ -34,18 +34,18 @@ myApp.controller('screen08Controller', ['$scope', function($scope){
     }
 
     $scope.checkExercise = function() {
-        $scope.points = 0;
+        let points = 0;
         
-        for(var i = 0; i < $scope.inputs.length; i++) {
-            if(($scope.inputs[i].value.toLowerCase() == $scope.words[i]) || ($scope.inputs[i].value.toLowerCase() == $scope.wordsCzech[i])) {
+        for(var i = 0; i < inputs.length; i++) {
+            if((inputs[i].value.toLowerCase() == $scope.words[i]) || (inputs[i].value.toLowerCase() == $scope.wordsCzech[i])) {
                 console.log('Done!');
-                $scope.points++;
+                points++;
             }
             else {
                 console.log('Wrong!');
             }
         }
-        $scope.checkTotalPoints($scope.points, $scope.currentScreen);
+        $scope.checkTotalPoints(points, currentScreen);
     }
 
 }]);

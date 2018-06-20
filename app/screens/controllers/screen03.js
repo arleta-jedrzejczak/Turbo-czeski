@@ -1,6 +1,6 @@
 myApp.controller('screen03Controller', ['$scope', function($scope){
 
-    $scope.currentScreen = 3;
+    let currentScreen = 3;
 
     $scope.answears = ["Ano", "Ne"];
     $scope.planswears = ["tak", "nie"];

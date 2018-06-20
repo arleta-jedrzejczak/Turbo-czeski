@@ -1,10 +1,10 @@
 myApp.controller('screen06Controller', ['$scope', function($scope){
 
-    $scope.currentScreen = 6;
+    let currentScreen = 6;
 
-    $scope.points = 0;
-    $scope.inputs = document.getElementsByClassName('input');
-    $scope.results = ["D", "C", "E", "A", "B"];
+    let points = 0;
+    const inputs = document.getElementsByClassName('input');
+    const results = ["D", "C", "E", "A", "B"];
     $scope.disableBtn = true;
 
     $scope.countLetters = function(event) {
@@ -19,31 +19,31 @@ myApp.controller('screen06Controller', ['$scope', function($scope){
 
         var helperPoints = 0;
 
-        for(var i = 0; i < $scope.inputs.length; i++) {
-            if($scope.inputs[i].value != "") {
+        for(var i = 0; i < inputs.length; i++) {
+            if(inputs[i].value != "") {
                 helperPoints++;
             }
         }
         
-        if(helperPoints == $scope.results.length) {
+        if(helperPoints == results.length) {
             $scope.disableBtn = false;
         }
         helperPoints = 0;
     }
 
     $scope.checkExercise = function() {
-        $scope.points = 0;
+        points = 0;
         
-        for(var i = 0; i < $scope.inputs.length; i++) {
-            if($scope.inputs[i].value.toUpperCase() == $scope.results[i]) {
+        for(var i = 0; i < inputs.length; i++) {
+            if(inputs[i].value.toUpperCase() == results[i]) {
                 console.log('Done!');
-                $scope.points++;
+                points++;
             }
             else {
                 console.log('Wrong!');
             }
         }
-        $scope.checkTotalPoints($scope.points, $scope.currentScreen);
+        $scope.checkTotalPoints(points, currentScreen);
     }
 
 }]);

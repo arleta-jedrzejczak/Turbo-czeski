@@ -1,3 +1,56 @@
 <div ng-controller="layoutController">
-    <p>{{layout}}</p>
+
+    <div class="layoutSection">
+        <div class="info">
+            <span>Witaj w interaktywnym szkoleniu "Turbo czeski"</span>
+            <button ng-click="all()">Kilk!</button>
+        </div>
+    </div>
+
+    <div class="layoutSection">
+        <div class="dictionary">
+            <ul>
+                <li ng-repeat="item in dictionary">
+                    <span lang="cs-CZ" xml:lang="cs-CZ">{{item.word}} - </span>
+                    <span>{{item.translate}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layoutSection">
+        <div class="map">
+
+        </div>
+    </div>
+
+    <div class="layoutSection">
+        <div class="points">
+
+        </div>
+    </div>
+
+    <div class="layoutSection">
+        <div class="credits">
+            
+        </div>
+    </div>
+
+    <div class="layoutButtons">
+        <div class="button">
+            <div class=""></div>
+        </div>
+        <div class="button">
+            <div class=""></div>
+        </div>
+        <div class="button">
+            <div class=""></div>
+        </div>
+        <div class="button">
+            <div class=""></div>
+        </div>
+        <div class="button">
+            <div class=""></div>
+        </div>
+    </div>
 </div>
