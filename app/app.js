@@ -54,7 +54,15 @@ myApp.controller('appController', ['$scope', '$location', function($scope, $loca
         //     { screen: 8, points: 0 },
         //     { screen: 9, points: null }
         // ]
-        // localStorage.setItem("allP", allPoints);
+
+        var allPoints = {"pass": "pass", "user": "user"};
+        localStorage.setItem("allP", allPoints);
+        var read = localStorage.getItem("allP");
+        console.log(read);
+    }
+
+    $scope.updateScreen = function(name, data) {
+
     }
 
     $scope.nextScreen = function() {
