@@ -26,7 +26,12 @@
 
     <div class="layoutSection">
         <div class="points">
-
+            <ul>
+                <li ng-repeat="item in screenAll">
+                    <span>{{item.title}}: </span>
+                    <span>{{item.points}}</span>
+                </li>
+            </ul>
         </div>
     </div>
 

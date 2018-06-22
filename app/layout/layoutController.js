@@ -1,4 +1,6 @@
-myApp.controller('layoutController', ['$scope', function($scope){
+myApp.controller('layoutController', ['$scope', '$http', function($scope, $http){
+
+    $scope.screenAll = [];
 
     $scope.dictionary = [
         { word: "Dobrý den", translate: "dzień dobry" },
@@ -8,7 +10,7 @@ myApp.controller('layoutController', ['$scope', function($scope){
         { word: "Ahoj", translate: "cześć" },
         { word: "Sbohem", translate: "do widzenia" },
         { word: "Na shledanou", translate: "do zobaczenia" },
-        { word:  "Dobrou noc", translate: "dobranoc" },
+        { word: "Dobrou noc", translate: "dobranoc" },
         { word: "Čau", translate: "pa" },
         { word: "Ano", translate: "tak" },
         { word: "Ne", translate: "nie" },
@@ -24,9 +26,30 @@ myApp.controller('layoutController', ['$scope', function($scope){
         { word: "Jsem z Polska.", translate: "Jestem z Polski." }
     ]
 
-    $scope.all = function() {
-        // let allPoints = localStorage.getItem("allP");
-        // console.log(allPoints);
+    this.$onInit = function() {
+
+        $http({
+            method: 'GET',
+            url: 'app/screens/screens.json'
+            }).then(function successCallback(response) {
+                let helperArr = response.data;
+                helperArr.forEach(function(e){
+                    console.log(e.points);
+                    if(e.exercise == true && e.points == null) {
+                        e.points = 0;
+                    }
+                    else if(e.exercise == false) {
+                        e.points = '--';
+                    }
+                    console.log(e.points);
+                })
+                $scope.screenAll = helperArr;
+                console.log($scope.screenAll);
+            }, function errorCallback(response) {
+                //
+            });
+
+        return $scope.screenAll;
     }
     
 }]);

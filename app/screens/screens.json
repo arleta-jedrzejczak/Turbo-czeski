@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Turbo czeski",
+        "exercise": false,
+        "points": null
+    },
+    {
+        "id": 2,
+        "title": "Powitania i pozegnania",
+        "exercise": false,
+        "points": null
+    },
+    {
+        "id": 3,
+        "title": "Zwroty grzecznościowe",
+        "exercise": false,
+        "points": null
+    },
+    {
+        "id": 4,
+        "title": "Pytania i odpowiedzi",
+        "exercise": false,
+        "points": null
+    },
+    {
+        "id": 5,
+        "title": "Wybór kategorii",
+        "exercise": true,
+        "points": null
+    },
+    {
+        "id": 6,
+        "title": "Uzupełnianie tłumaczeń",
+        "exercise": true,
+        "points": null
+    },
+    {
+        "id": 7,
+        "title": "Prawda lub fałsz",
+        "exercise": true,
+        "points": null
+    },
+    {
+        "id": 8,
+        "title": "Układanie rozsypanek",
+        "exercise": true,
+        "points": null
+    },
+    {
+        "id": 9,
+        "title": "Podsumowanie",
+        "exercise": false,
+        "points": null
+    }
+]

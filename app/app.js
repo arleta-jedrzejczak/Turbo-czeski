@@ -40,25 +40,27 @@ myApp.config(['$routeProvider', function($routeProvider){
 
 // });
 
-myApp.controller('appController', ['$scope', '$location', function($scope, $location){
+myApp.controller('appController', ['$scope', '$location', '$http', function($scope, $location, $http){
+
+    $scope.fire = function() {
+        
+    }
 
     this.$onInit = function() {
-        // let allPoints = [
-        //     { screen: 1, points: null },
-        //     { screen: 2, points: null },
-        //     { screen: 3, points: null },
-        //     { screen: 4, points: null },
-        //     { screen: 5, points: 0 },
-        //     { screen: 6, points: 0 },
-        //     { screen: 7, points: 0 },
-        //     { screen: 8, points: 0 },
-        //     { screen: 9, points: null }
-        // ]
 
-        var allPoints = {"pass": "pass", "user": "user"};
-        localStorage.setItem("allP", allPoints);
-        var read = localStorage.getItem("allP");
-        console.log(read);
+        // $http({
+        //     method: 'GET',
+        //     url: 'app/screens/screens.json'
+        //     }).then(function successCallback(response) {
+        //         console.log(response);
+        //     }, function errorCallback(response) {
+        //         console.log(response);
+        //     });
+
+        // var allPoints = {"pass": "pass", "user": "user"};
+        // localStorage.setItem("allP", allPoints);
+        // var read = localStorage.getItem("allP");
+        // console.log(read);
     }
 
     $scope.updateScreen = function(name, data) {
