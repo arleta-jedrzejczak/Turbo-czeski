@@ -34,17 +34,14 @@ myApp.controller('layoutController', ['$scope', '$http', function($scope, $http)
             }).then(function successCallback(response) {
                 let helperArr = response.data;
                 helperArr.forEach(function(e){
-                    console.log(e.points);
                     if(e.exercise == true && e.points == null) {
                         e.points = 0;
                     }
                     else if(e.exercise == false) {
                         e.points = '--';
                     }
-                    console.log(e.points);
                 })
                 $scope.screenAll = helperArr;
-                console.log($scope.screenAll);
             }, function errorCallback(response) {
                 //
             });

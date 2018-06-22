@@ -42,25 +42,23 @@ myApp.config(['$routeProvider', function($routeProvider){
 
 myApp.controller('appController', ['$scope', '$location', '$http', function($scope, $location, $http){
 
-    $scope.fire = function() {
-        
-    }
-
-    this.$onInit = function() {
-
-        // $http({
-        //     method: 'GET',
-        //     url: 'app/screens/screens.json'
-        //     }).then(function successCallback(response) {
-        //         console.log(response);
-        //     }, function errorCallback(response) {
-        //         console.log(response);
-        //     });
-
-        // var allPoints = {"pass": "pass", "user": "user"};
-        // localStorage.setItem("allP", allPoints);
-        // var read = localStorage.getItem("allP");
-        // console.log(read);
+    $scope.starter = function(screen) {
+        let helperTitle;
+        $http({
+            method: 'GET',
+            url: 'app/screens/screens.json'
+            }).then(function successCallback(response) {
+                let helperArr = response.data;
+                helperArr.forEach(function(e){
+                    if(e.id == screen) {
+                        helperTitle = e.title;
+                        console.log(helperTitle);
+                        return helperTitle;
+                    }
+                })
+            }, function errorCallback(response) {
+                //
+            });
     }
 
     $scope.updateScreen = function(name, data) {
