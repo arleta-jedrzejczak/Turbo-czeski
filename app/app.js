@@ -38,17 +38,35 @@ myApp.config(['$routeProvider', function($routeProvider){
 
 // myApp.run(function(){
 
+//     console.log('hhhhhhhhhhhh');
+
 // });
 
-myApp.controller('appController', ['$scope', '$location', '$http', function($scope, $location, $http){
+myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http', '$route', function($scope, $route,$location, $http, $rootScope){
+
+    this.$onInit = function() {
+        checkPage();
+    }
+
+    this.$onChange = function() {
+        checkPage();
+    }
+
+    checkPage = function() {
+        // let path = $route.$$path.slice(1, 2);
+        // console.log(path);
+        // console.log($route.current);
+    }
 
     $scope.starter = function(screen) {
+        console.log('fire');
         let helperTitle;
         $http({
             method: 'GET',
             url: 'app/screens/screens.json'
             }).then(function successCallback(response) {
                 let helperArr = response.data;
+                console.log(response.data);
                 helperArr.forEach(function(e){
                     if(e.id == screen) {
                         helperTitle = e.title;
@@ -74,7 +92,7 @@ myApp.controller('appController', ['$scope', '$location', '$http', function($sco
     }
 
     $scope.checkTotalPoints = function(points, screen) { 
-        console.log(points, screen);
+        localStorage.setItem(screen, points);
     }
 
 }]);

@@ -38,11 +38,10 @@ myApp.controller('screen08Controller', ['$scope', function($scope){
         
         for(var i = 0; i < inputs.length; i++) {
             if((inputs[i].value.toLowerCase() == $scope.words[i]) || (inputs[i].value.toLowerCase() == $scope.wordsCzech[i])) {
-                console.log('Done!');
                 points++;
             }
             else {
-                console.log('Wrong!');
+
             }
         }
         $scope.checkTotalPoints(points, currentScreen);

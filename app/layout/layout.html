@@ -1,43 +1,49 @@
 <div ng-controller="layoutController">
 
-    <div class="layoutSection">
-        <div class="info">
-            <span>Witaj w interaktywnym szkoleniu "Turbo czeski"</span>
-            <button ng-click="all()">Kilk!</button>
-        </div>
+    <div class="layoutHeader">
+        
     </div>
 
-    <div class="layoutSection">
-        <div class="dictionary">
-            <ul>
-                <li ng-repeat="item in dictionary">
-                    <span lang="cs-CZ" xml:lang="cs-CZ">{{item.word}} - </span>
-                    <span>{{item.translate}}</span>
-                </li>
-            </ul>
+    <div class="sections">
+        <div class="layoutSection">
+            <div class="info">
+                <span>Witaj w interaktywnym szkoleniu "Turbo czeski"</span>
+                <button ng-click="all()">Kilk!</button>
+            </div>
         </div>
-    </div>
 
-    <div class="layoutSection">
-        <div class="map">
-
+        <div class="layoutSection">
+            <div class="dictionary">
+                <ul>
+                    <li ng-repeat="item in dictionary">
+                        <span lang="cs-CZ" xml:lang="cs-CZ">{{item.word}} - </span>
+                        <span>{{item.translate}}</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div class="layoutSection">
-        <div class="points">
-            <ul>
-                <li ng-repeat="item in screenAll">
-                    <span>{{item.title}}: </span>
-                    <span>{{item.points}}</span>
-                </li>
-            </ul>
+        <div class="layoutSection">
+            <div class="map">
+
+            </div>
         </div>
-    </div>
 
-    <div class="layoutSection">
-        <div class="credits">
-            
+        <div class="layoutSection">
+            <div class="points">
+                <ul>
+                    <li ng-repeat="item in screenAll">
+                        <span>{{item.title}}: </span>
+                        <span>{{item.points}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layoutSection">
+            <div class="credits">
+                
+            </div>
         </div>
     </div>
 

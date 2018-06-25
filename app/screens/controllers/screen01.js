@@ -1,9 +1,5 @@
-myApp.controller('screen01Controller', ['$scope', function($scope){
+myApp.controller('screen01Controller', ['$scope', '$http', function($scope, $http){
 
     let currentScreen = 1;
-
-    this.$onInit = function() {
-        $scopeTitle = $scope.starter(currentScreen);
-    }
     
 }]);

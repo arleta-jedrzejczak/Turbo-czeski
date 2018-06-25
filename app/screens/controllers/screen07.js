@@ -34,11 +34,10 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
 
         for(var i = 0; i < helperArray.length; i++) {
             if(helperArray[i].value == $scope.sentences[i].result) {
-                console.log('Done!');
                 points++;
             }
             else {
-                console.log('Wrong!');
+
             }
         }
         $scope.checkTotalPoints(points, currentScreen);

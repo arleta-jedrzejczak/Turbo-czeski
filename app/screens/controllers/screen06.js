@@ -36,11 +36,10 @@ myApp.controller('screen06Controller', ['$scope', function($scope){
         
         for(var i = 0; i < inputs.length; i++) {
             if(inputs[i].value.toUpperCase() == results[i]) {
-                console.log('Done!');
                 points++;
             }
             else {
-                console.log('Wrong!');
+
             }
         }
         $scope.checkTotalPoints(points, currentScreen);

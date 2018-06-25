@@ -19,7 +19,6 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
     $scope.checkCategory = function(event) {
 
         event.target.checked = true;
-        console.log(event);
 
         var tempName = event.target.name;
         var name = document.getElementsByName(tempName);
@@ -50,11 +49,10 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
 
         for(var i = 0; i < $scope.countArray.length; i++) {
             if($scope.countArray[i].id == $scope.drags[i].category) {
-                console.log('Done!');
                 points++;
             }
             else {
-                console.log('Wrong!');
+
             }
         }
         $scope.checkTotalPoints(points, currentScreen);
