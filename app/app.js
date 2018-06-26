@@ -59,18 +59,16 @@ myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http',
     }
 
     $scope.starter = function(screen) {
-        console.log('fire');
         let helperTitle;
         $http({
             method: 'GET',
             url: 'app/screens/screens.json'
             }).then(function successCallback(response) {
                 let helperArr = response.data;
-                console.log(response.data);
                 helperArr.forEach(function(e){
                     if(e.id == screen) {
                         helperTitle = e.title;
-                        console.log(helperTitle);
+
                         return helperTitle;
                     }
                 })
@@ -92,7 +90,7 @@ myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http',
     }
 
     $scope.checkTotalPoints = function(points, screen) { 
-        localStorage.setItem(screen, points);
+        sessionStorage.setItem(screen, points);
     }
 
 }]);
