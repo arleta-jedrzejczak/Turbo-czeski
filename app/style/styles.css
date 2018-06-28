@@ -3,9 +3,22 @@
     height: 720px;
     border: 1px solid black;
     box-sizing: border-box;
+    position: relative;
+    left: 0;
+    top: 0;
 }
 
-#screen1 {
+.layoutSection {
+    width: 430px;
+    height: 720px;
+    border: 1px solid black;
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.screen1 {
     background-image: url('../assets/images/bg2.jpg');
     background-position: 0 0;
     background-size: 100% auto;
@@ -14,3 +27,4 @@
     font-family: 'Pangolin', cursive;
     font-size: 40px;
 }
+
