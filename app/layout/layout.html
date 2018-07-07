@@ -1,66 +1,71 @@
-<div ng-controller="layoutController">
+<div ng-controller="layoutController" id="layout">
 
-    <div class="layoutHeader">
-        
+    <div class="bar aboveBar">
     </div>
 
-    <div class="sections">
-        <div class="layoutSection">
-            <div class="info">
-                <span>Witaj w interaktywnym szkoleniu "Turbo czeski"</span>
-            </div>
-        </div>
+    <div class="bar bottomBar">
+        <a href={{prevScreen}}><</a> EKRAN {{currScreen}} <a href={{nextScreen}}>></a>
+    </div>
 
-        <div class="layoutSection">
-            <div class="dictionary">
-                <ul>
-                    <li ng-repeat="item in dictionary">
-                        <span lang="cs-CZ" xml:lang="cs-CZ">{{item.word}} - </span>
-                        <span>{{item.translate}}</span>
-                    </li>
-                </ul>
+    <div id="layoutContent">
+        <div class="sections">
+            <div class="button buttonInfo">
+                <div class="buttonInsider" id="buttonInfo" ng-click="callLayout($event)"></div>
             </div>
-        </div>
-
-        <div class="layoutSection">
-            <div class="map">
-                
+            <div class="layoutSection hiddenSection" id="infoSection">
+                <div class="info">
+                    <span>Witaj w interaktywnym szkoleniu "Turbo czeski"</span>
+                </div>
             </div>
-        </div>
 
-        <div class="layoutSection">
-            <div class="points">
-                <ul>
+            <div class="button buttonDictionary">
+                <div class="buttonInsider" id="buttonDictionary" ng-click="callLayout($event)"></div>
+            </div>
+            <div class="layoutSection hiddenSection" id="dictionarySection">
+                <div class="dictionary">
+                    <ul>
+                        <li ng-repeat="item in dictionary">
+                            <span lang="cs-CZ" xml:lang="cs-CZ">{{item.word}} - </span>
+                            <span>{{item.translate}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="button buttonMap">
+                <div class="buttonInsider" id="buttonMap" ng-click="callLayout($event)"></div>
+            </div>
+            <div class="layoutSection hiddenSection" id="mapSection">
+                <div class="map">
                     <li ng-repeat="item in screenAll">
-                        <span>{{item.title}}: </span>
-                        <span>{{item.points}}</span>
+                        <a href={{item.id}}>{{item.title}}</a>
                     </li>
-                </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="layoutSection">
-            <div class="credits">
-                
+            <div class="button buttonPoints">
+                <div class="buttonInsider" id="buttonPoints" ng-click="callLayout($event)"></div>
+            </div>
+            <div class="layoutSection hiddenSection" id="pointsSection">
+                <div class="points">
+                    <ul>
+                        <li ng-repeat="item in screenAll">
+                            <span>{{item.title}}: </span>
+                            <span>{{item.points}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="button buttonCredits">
+                <div class="buttonInsider" id="buttonCredits" ng-click="callLayout($event)"></div>
+            </div>
+            <div class="layoutSection hiddenSection"  id="creditsSection">
+                <div class="credits">
+                    
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="layoutButtons">
-        <div class="button">
-            <div class=""></div>
-        </div>
-        <div class="button">
-            <div class=""></div>
-        </div>
-        <div class="button">
-            <div class=""></div>
-        </div>
-        <div class="button">
-            <div class=""></div>
-        </div>
-        <div class="button">
-            <div class=""></div>
-        </div>
-    </div>
 </div>

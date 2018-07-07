@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', ['ngRoute']).component('layout', {templateUrl: 'app/layout/layout.html'});
 
-myApp.config(['$routeProvider', function($routeProvider){
+myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 
     $routeProvider
         .when('/1', {
@@ -33,6 +33,10 @@ myApp.config(['$routeProvider', function($routeProvider){
         .otherwise({
             redirectTo: '/1'
         })
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+      }).hashPrefix('');
 
 }]);
 
@@ -43,14 +47,6 @@ myApp.config(['$routeProvider', function($routeProvider){
 // });
 
 myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http', '$route', function($scope, $route,$location, $http, $rootScope){
-
-    this.$onInit = function() {
-        checkPage();
-    }
-
-    this.$onChange = function() {
-        checkPage();
-    }
 
     checkPage = function() {
         // let path = $route.$$path.slice(1, 2);

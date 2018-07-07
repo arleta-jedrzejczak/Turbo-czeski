@@ -1,6 +1,10 @@
-myApp.controller('layoutController', ['$scope', '$http', function($scope, $http){
+myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', function($scope, $http, $route, $location){
 
     $scope.screenAll = [];
+    var _this = this;
+    let curr;
+    let prevScreen;
+    let nextScreen;
 
     $scope.dictionary = [
         { word: "Dobrý den", translate: "dzień dobry" },
@@ -45,8 +49,111 @@ myApp.controller('layoutController', ['$scope', '$http', function($scope, $http)
             }, function errorCallback(response) {
                 //
             });
+            checkScreen();
+            return $scope.screenAll;
+    }
 
-        return $scope.screenAll;
+    function checkScreen() {
+        curr = checkChars($location.$$path, '/');
+        curr = Number(curr);
+        prevScreen = curr - 1;
+        nextScreen = curr + 1;
+        if(curr == 1) {
+            prevScreen = null;
+        }
+        if(curr == 9) {
+            nextScreen = null;
+        }
+        $scope.currScreen = curr;
+        $scope.prevScreen = prevScreen;
+        $scope.nextScreen = nextScreen;
+    }
+
+    $scope.$on('$locationChangeStart', function() {
+        checkScreen();
+    });
+
+    function checkChars(value, char) {
+        let dirLast = value.length - 1;
+        let dir = value.charAt(dirLast);
+        if(dir === char) {
+            value = value.slice(0, -1);
+        }
+        if(value.lastIndexOf(char) != -1) {
+            let end = value.lastIndexOf(char) + 1;
+            value = value.slice(end, value.length)
+        }
+        return value;
     }
     
+
+    var button1 = document.getElementById('buttonInfo');
+    var button2 = document.getElementById('buttonDictionary');
+    var button3 = document.getElementById('buttonMap');
+    var button4 = document.getElementById('buttonPoints');
+    var button5 = document.getElementById('buttonCredits');
+    var layout = document.querySelector('#layoutContent');
+    var lastCurrent;
+    var opened = false;
+
+    var timeline = new TimelineMax();
+
+    var consoleText = function() {
+        timeline.paused(true);
+    }
+
+    TweenMax.set(layout, { x: 430 })
+
+    timeline.paused(true);
+    timeline.to(layout, 1, {x: 0, ease:Power4.easeOut, onComplete: consoleText});
+    timeline.to(layout, 1, {x: 430, ease:Power4.easeOut, onComplete: consoleText});
+    timeline.repeat(-1);
+    
+    $scope.callLayout = function(event) {
+
+        _this.opened = false;
+        let section = event.target.parentElement.nextElementSibling;
+        let current = event.target;
+
+        if(timeline._paused) {
+            checkStatus();
+            if(_this.opened == true) {
+                if(_this.lastCurrent != current) {
+                    addClass();
+                    removeClass();
+                }
+                else if(_this.lastCurrent == current) {
+                    window.setTimeout(addClass, 1000);
+                    timeline.paused(false);
+                }
+            }
+            else {
+                removeClass();
+                timeline.paused(false);
+            }
+        }
+
+        function addClass() {
+            section.parentNode.childNodes.forEach(function(e){
+                if(e.nodeName !== '#text' && e.classList.length == 1) {
+                    e.classList.add("hiddenSection");
+                }
+            })
+        }
+
+        function removeClass() {
+            section.classList.remove("hiddenSection");
+        }
+
+        function checkStatus() {
+            section.parentNode.childNodes.forEach(function(e){
+                if(e.nodeName !== '#text' && e.classList.length == 1) {
+                    _this.opened = true;
+                }
+            })
+        }
+
+        _this.lastCurrent = current;
+    }
+
 }]);

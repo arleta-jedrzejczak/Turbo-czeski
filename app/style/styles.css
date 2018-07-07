@@ -1,9 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 .fullSize {
     width: 1280px;
     height: 720px;
     border: 1px solid black;
-    box-sizing: border-box;
-    position: relative;
     left: 0;
     top: 0;
 }
@@ -12,19 +14,80 @@
     width: 430px;
     height: 720px;
     border: 1px solid black;
-    z-index: 999;
     position: absolute;
-    right: 0;
+    background-color: aquamarine;
+    left: 850px;
     top: 0;
 }
 
+.bar {
+    background-color: lightcoral;
+}
+
+.aboveBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1280px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.bottomBar {
+    position: absolute;
+    left: 0;
+    top: 670px;
+    width: 1280px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.hiddenSection {
+    display: none;
+}
+
 .screen1 {
-    background-image: url('../assets/images/bg2.jpg');
+    /* background-image: url('../assets/images/bg2.jpg'); */
+    background-color: blanchedalmond;
     background-position: 0 0;
     background-size: 100% auto;
     width: 100%;
     height: 100%;
-    font-family: 'Pangolin', cursive;
-    font-size: 40px;
+    /* font-family: 'Pangolin', cursive; */
+    /* font-size: 40px; */
 }
 
+.button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    position: absolute;
+    left: 800px;
+}
+
+.buttonInfo {
+    top: 20px;
+}
+
+.buttonInsider {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: red;
+}
+
+.buttonDictionary {
+    top: 90px;
+}
+
+.buttonMap {
+    top: 160px;
+}
+
+.buttonPoints {
+    top: 230px;
+}
+
+.buttonCredits {
+    top: 300px;
+}
