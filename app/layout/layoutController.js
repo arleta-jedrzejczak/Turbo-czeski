@@ -5,6 +5,7 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
     let curr;
     let prevScreen;
     let nextScreen;
+    $scope.currTitle = '';
 
     $scope.dictionary = [
         { word: "Dobrý den", translate: "dzień dobry" },
@@ -46,11 +47,16 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
                     }
                 })
                 $scope.screenAll = helperArr;
+                checkScreen();
             }, function errorCallback(response) {
                 //
             });
-            checkScreen();
             return $scope.screenAll;
+    }
+
+    function getTitle(screen) {
+        let rightScreen = screen - 1;
+        $scope.currTitle = $scope.screenAll[rightScreen].title;
     }
 
     function checkScreen() {
@@ -67,6 +73,7 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
         $scope.currScreen = curr;
         $scope.prevScreen = prevScreen;
         $scope.nextScreen = nextScreen;
+        getTitle(curr);
     }
 
     $scope.$on('$locationChangeStart', function() {
@@ -95,11 +102,20 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
     var layout = document.querySelector('#layoutContent');
     var lastCurrent;
     var opened = false;
+    var close = document.getElementsByClassName('close');
 
     var timeline = new TimelineMax();
 
     var consoleText = function() {
+        TweenMax.fromTo(close, 0.5, {scale:2}, {scale:1, ease:Power1.easeOut});
         timeline.paused(true);
+    }
+
+    //nie dziala, zly parametr
+    for(let i = 0; close.length > i; i++) {
+        close[i].addEventListener('click', function(){
+            $scope.callLayout(current);
+        })
     }
 
     TweenMax.set(layout, { x: 430 })

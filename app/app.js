@@ -46,7 +46,7 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 
 // });
 
-myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http', '$route', function($scope, $route,$location, $http, $rootScope){
+myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http', '$route', function($scope, $route, $location, $http, $rootScope){
 
     checkPage = function() {
         // let path = $route.$$path.slice(1, 2);

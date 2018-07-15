@@ -10,7 +10,10 @@
     </style> -->
     <link href="app/style/reset.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="app/style/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
     <script src="app/lib/angular.min.js"></script>
     <script src="app/lib/angular-route.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
@@ -19,7 +22,6 @@
 
     <script src="app/app.js"></script>
     <script src="app/layout/layoutController.js"></script>
-    <script src="app/screens/controllers/screen01.js"></script>
     <script src="app/screens/controllers/screen02.js"></script>
     <script src="app/screens/controllers/screen03.js"></script>
     <script src="app/screens/controllers/screen04.js"></script>
@@ -33,5 +35,6 @@
   <body ng-app="myApp" ng-controller="appController">
     <layout class="layoutFull"></layout>
     <div class="fullSize" ng-view></div>
+    <script src="app/screens/controllers/screen01.js"></script>
   </body>
 </html>

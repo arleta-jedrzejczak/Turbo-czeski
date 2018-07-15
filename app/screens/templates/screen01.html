@@ -1,8 +1,66 @@
-<div ng-controller="screen01Controller" class="screen1">
-    <div class="screenBg">
-        <div class="whiteBg">
-            <p>TURBO CZESKI</p>
-            <p>absolutne podstawy dla kompletnych laików</p>
-        </div>
+<style>
+    .screenBg {
+        /* background-image: url('./app/assets/images/display.jpg'); */
+        background-repeat: no-repeat;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .whiteBg {
+        position: absolute;
+        top: 300px;
+        left: 340px;
+    }
+
+    .line {
+        width: 600px;
+        border: 3px solid #B2EBF2;
+        border-radius: 5px;
+        position: absolute;
+        top: 150px;
+    }
+
+    .dot {
+        left: 600px;
+        position: absolute;
+        top: 143px;
+        width: 10px;
+        border: 10px solid #BDBDBD;
+        border-radius: 50%;
+        z-index: 9;
+    }
+
+    .screen1 {
+        background-color: #FFDF80;
+        background-position: 0 0;
+        background-size: 100% auto;
+        width: 100%;
+        height: 100%;
+        /* font-family: 'Pangolin', cursive; */
+        /* font-size: 40px; */
+    }
+
+    .screenPhoto {
+        background-image: url('./app/assets/images/bg2.jpg');
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<div ng-controller="screen01Controller" class="screen1" id="screen1">
+    <div class="screenPhoto" id="screenPhoto"></div>
+    <!-- <div class="screenBg" id="screenBg"></div> -->
+    <div class="whiteBg">
+        <p>TURBO CZESKI</p>
+        <p>{{dom}}</p>
+        <p>absolutne podstawy dla kompletnych laików</p>
+        <a href="/2">2</a>
+        <hr id="dot" class="dot">
+        <hr class="line">
     </div>
 </div>
