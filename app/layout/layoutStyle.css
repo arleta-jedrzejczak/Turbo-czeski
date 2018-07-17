@@ -1,0 +1,103 @@
+@keyframes circle {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.layoutSection {
+    width: 430px;
+    height: 720px;
+    position: absolute;
+    background-color: aquamarine;
+    left: 850px;
+    top: 0;
+}
+
+.bar {
+    background-color: #0097A7;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 13px;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    width: 1280px;
+    z-index: 6;
+}
+
+.bottomLinks {
+    color: white;
+}
+
+.aboveBar {
+    top: 0;
+}
+
+.bottomBar {
+    top: 670px;
+}
+
+.hiddenSection {
+    display: none;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 790px;
+}
+
+.buttonInfo {
+    top: 25px;
+}
+
+.layoutContent {
+    z-index: 7;
+    position: absolute;
+}
+
+.buttonInsider {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #FF5722;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+
+.buttonInsider:hover {
+    animation: circle 1s infinite;
+}
+
+.close {
+    position: relative;
+    left: 400px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.buttonDictionary {
+    top: 90px;
+}
+
+.buttonMap {
+    top: 160px;
+}
+
+.buttonPoints {
+    top: 230px;
+}
+
+.buttonCredits {
+    top: 300px;
+}

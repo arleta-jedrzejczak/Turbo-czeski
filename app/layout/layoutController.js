@@ -104,8 +104,6 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
     var opened = false;
     var close = document.getElementsByClassName('close');
 
-    var timeline = new TimelineMax();
-
     var consoleText = function() {
         TweenMax.fromTo(close, 0.5, {scale:2}, {scale:1, ease:Power1.easeOut});
         timeline.paused(true);
@@ -118,7 +116,10 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
         })
     }
 
-    TweenMax.set(layout, { x: 430 })
+    var timeline = new TimelineMax();
+
+    TweenMax.set(layout, { x: 430, opacity: 0, display: 'none' });
+    TweenMax.to(layout, 2, { opacity: 1, display: 'block' });
 
     timeline.paused(true);
     timeline.to(layout, 1, {x: 0, ease:Power4.easeOut, onComplete: consoleText});

@@ -1,24 +1,28 @@
-<div ng-controller="screen02Controller">
-    <div class="screenBg">
-        <div class="exercise">
-            <p class="text">Cześć! Dzień dobry! Dobry wieczór! W Czechach możesz przywitać się na wiele sposobów. Oto niektóre z nich:</p>
-            <div>
-                <ul lang="cs-CZ" xml:lang="cs-CZ">
-                    <li ng-repeat="greeting in greetings">{{greeting}}</li>
-                </ul>
-                <ul>
-                    <li ng-repeat="plgreeting in plgreetings">{{plgreeting}}</li>
-                </ul>
-            </div>
-            <p>Na do widzenia możemy powiedzieć:</p>
-            <div>
-                <ul lang="cs-CZ" xml:lang="cs-CZ">
-                    <li ng-repeat="goodbye in goodbyes">{{goodbye}}</li>
-                </ul>
-                <ul>
-                    <li ng-repeat="plgoodbye in plgoodbyes">{{plgoodbye}}</li>
-                </ul>
-            </div>
+<div ng-controller="screen02Controller" class="screen2" id="screen2">
+    <div class="screen2Bg" id="screen2Bg"></div>
+    <object class="tablet2" id="tablet2" object id="tablet2" type="image/svg+xml" data="app/assets/images/tablet.svg"></object>
+    <div class="exercise2">
+        <p class="hello2 hello21" id="hello21">Cześć!</p>
+        <p class="hello2 hello22" id="hello22">Dzień dobry!</p>
+        <p class="hello2 hello23" id="hello23">Dobry wieczór!</p><br>
+        <p class="order2" id="order2">W Czechach możesz przywitać się na wiele sposobów. Oto niektóre z nich:</p>
+        <div>
+            <ul id="greetCz" class="greetCz" lang="cs-CZ" xml:lang="cs-CZ">
+                <li ng-repeat="greeting in greetings">{{greeting}}</li>
+            </ul>
+            <ul id="greetPl" class="greetPl">
+                <li ng-repeat="plgreeting in plgreetings">{{plgreeting}}</li>
+            </ul>
+        </div>
+        <p class="order22" id="order22">Na do widzenia możesz powiedzieć:</p>
+        <div>
+            <ul id="goodbCz" class="goodbCz" lang="cs-CZ" xml:lang="cs-CZ">
+                <li ng-repeat="goodbye in goodbyes">{{goodbye}}</li>
+            </ul>
+            <ul id="goodbPl" class="goodbPl">
+                <li ng-repeat="plgoodbye in plgoodbyes">{{plgoodbye}}</li>
+            </ul>
         </div>
     </div>
+    
 </div>
