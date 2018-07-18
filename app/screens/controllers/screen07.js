@@ -7,15 +7,14 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
         {question: "Jak se jmenuješ?", answear: "Jmenuji se Anna.", name: "q2", result: "true"},
         {question: "Odkud jsi?", answear: "Omlouvám se.", name: "q3", result: "false"}
     ]
-
+    let helperArray = [];
     const checkingPoints = document.getElementsByClassName('checkingPoints');
-    let points = 0;
+    $scope.points = 0;
     $scope.disableBtn = true;
 
     $scope.checkSubmit = function() {
         
         let helperPoints = 0;
-        let helperArray = [];
         
         for(var i = 0; i < checkingPoints.length; i++) {
             if(checkingPoints[i].checked == true) {
@@ -33,14 +32,15 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
     $scope.checkExercise = function() {
 
         for(var i = 0; i < helperArray.length; i++) {
+            console.log($scope.sentences[i]);
             if(helperArray[i].value == $scope.sentences[i].result) {
-                points++;
+                $scope.points++;
             }
             else {
 
             }
         }
-        $scope.checkTotalPoints(points, currentScreen);
+        $scope.checkTotalPoints($scope.points, currentScreen);
     }
 
 }]);

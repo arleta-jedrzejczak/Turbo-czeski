@@ -7,6 +7,7 @@ myApp.controller('screen08Controller', ['$scope', function($scope){
 
     $scope.disableBtn = true;
     const inputs = document.getElementsByClassName('words');
+    $scope.points = 0;
 
     $scope.countLetters = function(event) {
 
@@ -34,17 +35,17 @@ myApp.controller('screen08Controller', ['$scope', function($scope){
     }
 
     $scope.checkExercise = function() {
-        let points = 0;
+        $scope.points = 0;
         
         for(var i = 0; i < inputs.length; i++) {
             if((inputs[i].value.toLowerCase() == $scope.words[i]) || (inputs[i].value.toLowerCase() == $scope.wordsCzech[i])) {
-                points++;
+                $scope.points++;
             }
             else {
 
             }
         }
-        $scope.checkTotalPoints(points, currentScreen);
+        $scope.checkTotalPoints($scope.points, currentScreen);
     }
 
 }]);

@@ -36,6 +36,7 @@
 
 .aboveBar {
     top: 0;
+    display: none;
 }
 
 .bottomBar {

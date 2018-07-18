@@ -54,24 +54,24 @@ myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http',
         // console.log($route.current);
     }
 
-    $scope.starter = function(screen) {
-        let helperTitle;
-        $http({
-            method: 'GET',
-            url: 'app/screens/screens.json'
-            }).then(function successCallback(response) {
-                let helperArr = response.data;
-                helperArr.forEach(function(e){
-                    if(e.id == screen) {
-                        helperTitle = e.title;
+    // $scope.starter = function(screen) {
+    //     let helperTitle;
+    //     $http({
+    //         method: 'GET',
+    //         url: 'app/screens/screens.json'
+    //         }).then(function successCallback(response) {
+    //             let helperArr = response.data;
+    //             helperArr.forEach(function(e){
+    //                 if(e.id == screen) {
+    //                     helperTitle = e.title;
 
-                        return helperTitle;
-                    }
-                })
-            }, function errorCallback(response) {
-                //
-            });
-    }
+    //                     return helperTitle;
+    //                 }
+    //             })
+    //         }, function errorCallback(response) {
+    //             //
+    //         });
+    // }
 
     $scope.updateScreen = function(name, data) {
 

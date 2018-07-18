@@ -13,7 +13,7 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
     ]
 
     const checkButton = document.getElementsByClassName('checkButton');
-    let points = 0;
+    $scope.points = 0;
     $scope.disableBtn = true;
 
     $scope.checkCategory = function(event) {
@@ -46,16 +46,17 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
     }
 
     $scope.checkExercise = function() {
+        $scope.points = 0;
 
         for(var i = 0; i < $scope.countArray.length; i++) {
             if($scope.countArray[i].id == $scope.drags[i].category) {
-                points++;
+                $scope.points++;
             }
             else {
 
             }
         }
-        $scope.checkTotalPoints(points, currentScreen);
+        $scope.checkTotalPoints($scope.points, currentScreen);
     }
 
 }]);

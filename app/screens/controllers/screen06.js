@@ -2,7 +2,7 @@ myApp.controller('screen06Controller', ['$scope', function($scope){
 
     let currentScreen = 6;
 
-    let points = 0;
+    $scope.points = 0;
     const inputs = document.getElementsByClassName('input');
     const results = ["D", "C", "E", "A", "B"];
     $scope.disableBtn = true;
@@ -32,17 +32,17 @@ myApp.controller('screen06Controller', ['$scope', function($scope){
     }
 
     $scope.checkExercise = function() {
-        points = 0;
+        $scope.points = 0;
         
         for(var i = 0; i < inputs.length; i++) {
             if(inputs[i].value.toUpperCase() == results[i]) {
-                points++;
+                $scope.points++;
             }
             else {
 
             }
         }
-        $scope.checkTotalPoints(points, currentScreen);
+        $scope.checkTotalPoints($scope.points, currentScreen);
     }
 
 }]);

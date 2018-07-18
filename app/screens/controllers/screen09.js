@@ -1,4 +1,4 @@
-myApp.controller('screen01Controller', ['$scope', '$http',function($scope, $http){
+myApp.controller('screen09Controller', ['$scope', '$http',function($scope, $http){
 
     let currentScreen = 9;
     $scope.pointsAll;
