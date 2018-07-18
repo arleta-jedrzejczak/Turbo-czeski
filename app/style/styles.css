@@ -24,6 +24,16 @@
     background-color: white;
 }
 
+.order {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.word {
+    font-size: 22px;
+    font-family: 'Lobster', cursive;
+}
+
 @media (min-width: 1280px) {
     body {
       overflow-x: hidden;

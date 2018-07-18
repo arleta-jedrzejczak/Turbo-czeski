@@ -32,12 +32,13 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
     $scope.checkExercise = function() {
 
         for(var i = 0; i < helperArray.length; i++) {
-            console.log($scope.sentences[i]);
-            if(helperArray[i].value == $scope.sentences[i].result) {
-                $scope.points++;
-            }
-            else {
+            for(let j = 0; j < $scope.sentences.length; j++) {
+                if(helperArray[i].value == $scope.sentences[j].result) {
+                    $scope.points++;
+                }
+                else {
 
+                }
             }
         }
         $scope.checkTotalPoints($scope.points, currentScreen);

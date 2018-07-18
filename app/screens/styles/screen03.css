@@ -34,3 +34,69 @@
     width: 300px;
     height: 400px;
 }
+
+.order3 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.yes {
+    position: absolute;
+    top: 0;
+    left: 5\70px;
+}
+
+.no {
+    position: absolute;
+    top: 0;
+    left: 120px;
+}
+
+.ansCz {
+    position: absolute;
+    top: 150px;
+    left: 10px;
+}
+
+.ansPl {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
+.order32 {
+    position: absolute;
+    top: 240px;
+    left: 0;
+}
+
+.behCz {
+    position: absolute;
+    top: 350px;
+    left: 10px;
+}
+
+.behPl {
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+.please {
+    position: absolute;
+    top: 300px;
+    left: 0;
+}
+
+.thanks {
+    position: absolute;
+    top: 300px;
+    left: 75px;
+}
+
+.sorry {
+    position: absolute;
+    top: 300px;
+    left: 160px;
+}
