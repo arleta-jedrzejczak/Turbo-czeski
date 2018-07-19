@@ -26,7 +26,6 @@ myApp.controller('screen08Controller', ['$scope', function($scope){
                 helperPoints++;
             }
         }
-        console.log(helperPoints);
         
         if(helperPoints == $scope.words.length) {
             $scope.disableBtn = false;
@@ -35,6 +34,7 @@ myApp.controller('screen08Controller', ['$scope', function($scope){
     }
 
     $scope.checkExercise = function() {
+        
         $scope.points = 0;
         
         for(var i = 0; i < inputs.length; i++) {

@@ -46,6 +46,7 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
     }
 
     $scope.checkExercise = function() {
+        
         $scope.points = 0;
 
         for(var i = 0; i < $scope.countArray.length; i++) {

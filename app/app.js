@@ -48,43 +48,6 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 
 myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http', '$route', function($scope, $route, $location, $http, $rootScope){
 
-    checkPage = function() {
-        // let path = $route.$$path.slice(1, 2);
-        // console.log(path);
-        // console.log($route.current);
-    }
-
-    // $scope.starter = function(screen) {
-    //     let helperTitle;
-    //     $http({
-    //         method: 'GET',
-    //         url: 'app/screens/screens.json'
-    //         }).then(function successCallback(response) {
-    //             let helperArr = response.data;
-    //             helperArr.forEach(function(e){
-    //                 if(e.id == screen) {
-    //                     helperTitle = e.title;
-
-    //                     return helperTitle;
-    //                 }
-    //             })
-    //         }, function errorCallback(response) {
-    //             //
-    //         });
-    // }
-
-    $scope.updateScreen = function(name, data) {
-
-    }
-
-    $scope.nextScreen = function() {
-
-    }
-
-    $scope.prevScreen = function() {
-
-    }
-
     $scope.checkTotalPoints = function(points, screen) { 
         sessionStorage.setItem(screen, points);
     }

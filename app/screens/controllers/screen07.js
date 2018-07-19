@@ -11,6 +11,7 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
     const checkingPoints = document.getElementsByClassName('checkingPoints');
     $scope.points = 0;
     $scope.disableBtn = true;
+    let helperFinalArray = [];
 
     $scope.checkSubmit = function() {
         
@@ -30,15 +31,22 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
     }
 
     $scope.checkExercise = function() {
+        
+        $scope.points = 0;
+        helperFinalArray = [];
 
-        for(var i = 0; i < helperArray.length; i++) {
-            for(let j = 0; j < $scope.sentences.length; j++) {
-                if(helperArray[i].value == $scope.sentences[j].result) {
-                    $scope.points++;
-                }
-                else {
+        for(var i = 0; i < checkingPoints.length; i++) {
+            if(checkingPoints[i].checked == true) {
+                helperFinalArray.push(checkingPoints[i]);
+            }
+        }
 
-                }
+        for(var i = 0; i < helperFinalArray.length; i++) {
+            if(helperFinalArray[i].value == $scope.sentences[i].result) {
+                $scope.points++;
+            }
+            else {
+
             }
         }
         $scope.checkTotalPoints($scope.points, currentScreen);

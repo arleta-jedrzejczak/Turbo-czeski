@@ -16,3 +16,100 @@
     top: 0;
     left: 0;
 }
+
+.sticker4 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+}
+
+#stic0 {
+    top: 80px;
+    left: 10px;
+}
+
+#stic1 {
+    top: 80px;
+    left: 320px;
+    transform: rotate(20deg)
+}
+
+#stic2 {
+    top: 80px;
+    left: 630px;
+    transform: rotate(5deg)
+}
+
+#stic3 {
+    top: 80px;
+    left: 940px;
+    transform: rotate(350deg)
+}
+
+#stic4 {
+    top: 360px;
+    left: 160px;
+    transform: rotate(15deg)
+}
+
+#stic5 {
+    top: 360px;
+    left: 470px;
+}
+
+#stic6 {
+    top: 360px;
+    left: 780px;
+    transform: rotate(340deg)
+}
+
+.constainer4 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 3;
+    line-height: 26px;
+}
+
+#text0 {
+    top: 190px;
+    left: 75px;
+    transform: rotate(357deg)
+}
+
+#text1 {
+    top: 160px;
+    left: 390px;
+    transform: rotate(17deg)
+}
+
+#text2 {
+    top: 180px;
+    left: 700px;
+    transform: rotate(2deg)
+}
+
+#text3 {
+    top: 180px;
+    left: 1025px;
+    transform: rotate(347deg)
+}
+
+#text4 {
+    top: 460px;
+    left: 220px;
+    transform: rotate(11deg)
+}
+
+#text5 {
+    top: 470px;
+    left: 560px;
+    transform: rotate(357deg)
+}
+
+#text6 {
+    top: 460px;
+    left: 870px;
+    transform: rotate(337deg)
+}
