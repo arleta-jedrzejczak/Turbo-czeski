@@ -10,7 +10,7 @@ myApp.controller('screen01Controller', ['$scope', '$route', function($scope, $ro
 
 
 
-    var timeline1 = new TimelineMax();
+    var timeline1 = new TimelineMax({onComplete: $scope.accentChevron});
 
     TweenMax.set(screen1Bg, {opacity: 0});
     TweenMax.set(display, {scale: 0});

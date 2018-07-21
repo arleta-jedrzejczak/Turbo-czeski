@@ -23,7 +23,7 @@ myApp.controller('screen03Controller', ['$scope', function($scope){
     const thanks = document.getElementById('thanks');
     const sorry = document.getElementById('sorry');
 
-    var timeline2 = new TimelineMax();
+    var timeline3 = new TimelineMax({onComplete: $scope.accentChevron});
 
     TweenMax.set(screen3Bg, {opacity: 0});
     TweenMax.set(desk, {opacity: 0, x: -500});
@@ -41,18 +41,18 @@ myApp.controller('screen03Controller', ['$scope', function($scope){
 
     TweenMax.to(screen3Bg, 1, { opacity: 1 });
 
-    timeline2.to(screen3Bg, 2, {opacity: 0, display: 'none', ease:Power4.easeInOut}, 1);
-    timeline2.to(desk, 2, {opacity: 1, x: 0, ease: Elastic.easeOut.config(1, 0.35)});
-    timeline2.to(yes, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut});
-    timeline2.to(no, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut}, "+=0.5");
-    timeline2.to(order, 1, {opacity: 1, y: 0, ease: Back.easeOut.config(1.7)}, "+=1");
-    timeline2.to(ansCz, 1, {opacity: 1, scale: 1}, "+=3");
-    timeline2.to(ansPl, 1, {opacity: 1, scale: 1}, "+=0.5");
-    timeline2.to(order2, 1, {opacity: 1, y: 0, ease: Back.easeOut.config(1.7)}, "+=2");
-    timeline2.to(please, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut}, "+=1");
-    timeline2.to(thanks, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut}, "+=0.5");
-    timeline2.to(sorry, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut}, "+=0.5");
-    timeline2.to(behCz, 1, {opacity: 1, scale: 1}, "+=2");
-    timeline2.to(behPl, 1, {opacity: 1, scale: 1}, "+=0.5");
+    timeline3.to(screen3Bg, 2, {opacity: 0, display: 'none', ease:Power4.easeInOut}, 1);
+    timeline3.to(desk, 2, {opacity: 1, x: 0, ease: Elastic.easeOut.config(1, 0.35)});
+    timeline3.to(yes, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut});
+    timeline3.to(no, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut}, "+=0.5");
+    timeline3.to(order, 1, {opacity: 1, y: 0, ease: Back.easeOut.config(1.7)}, "+=1");
+    timeline3.to(ansCz, 1, {opacity: 1, scale: 1}, "+=3");
+    timeline3.to(ansPl, 1, {opacity: 1, scale: 1}, "+=0.5");
+    timeline3.to(order2, 1, {opacity: 1, y: 0, ease: Back.easeOut.config(1.7)}, "+=2");
+    timeline3.to(please, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut}, "+=1");
+    timeline3.to(thanks, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut}, "+=0.5");
+    timeline3.to(sorry, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut}, "+=0.5");
+    timeline3.to(behCz, 1, {opacity: 1, scale: 1}, "+=2");
+    timeline3.to(behPl, 1, {opacity: 1, scale: 1}, "+=0.5");
 
 }]);

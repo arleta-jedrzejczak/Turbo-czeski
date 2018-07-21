@@ -21,7 +21,7 @@ myApp.controller('screen02Controller', ['$scope', '$route', function($scope, $ro
     const goodbCz = document.getElementById('goodbCz');
     const goodbPl = document.getElementById('goodbPl');
 
-    var timeline2 = new TimelineMax();
+    var timeline2 = new TimelineMax({onComplete: $scope.accentChevron});
 
     TweenMax.set(screen2Bg, {opacity: 0});
     TweenMax.set(tablet, {opacity: 0, scale: 0});

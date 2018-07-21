@@ -52,4 +52,9 @@ myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http',
         sessionStorage.setItem(screen, points);
     }
 
+    $scope.accentChevron = function() {
+        let chevron = document.getElementsByClassName('fire');
+        TweenMax.fromTo(chevron, 1, { scale: 2, color: '#f00' }, { scale: 1, ease:Power4.easeInOut, color: '#fff' });
+    }
+
 }]);

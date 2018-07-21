@@ -5,7 +5,7 @@
     </div>
 
     <div class="bar bottomBar">
-        <a href={{prevScreen}}><i class="fas fa-chevron-left bottomLinks"></i></a><span class="bottomLinks">  EKRAN  {{currScreen}} </span><a href={{nextScreen}}><i class="fas fa-chevron-right bottomLinks"></i></a>
+        <a href={{prevScreen}}><i class="fas fa-chevron-left bottomLinks"></i></a><span class="bottomLinks">  EKRAN  {{currScreen}} </span><a href={{nextScreen}}><i class="fas fa-chevron-right bottomLinks fire"></i></a>
     </div>
 
     <div id="layoutContent" class="layoutContent">
@@ -62,8 +62,8 @@
                 </div>
             </div>
 
-            <div class="button buttonCredits" title="O szkoleniu">
-                <div class="buttonInsider" id="buttonCredits" ng-click="callLayout($event)"></div>
+            <div class="button buttonCredits" title="O autorze">
+                <div class="buttonInsider fas fa-user" id="buttonCredits" ng-click="callLayout($event)"></div>
             </div>
             <div class="layoutSection hiddenSection"  id="creditsSection">
                 <div class="close fas fa-times"></div>

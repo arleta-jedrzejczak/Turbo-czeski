@@ -24,41 +24,41 @@
     z-index: 2;
 }
 
-#stic0 {
+#stic40 {
     top: 80px;
     left: 10px;
 }
 
-#stic1 {
+#stic41 {
     top: 80px;
     left: 320px;
     transform: rotate(20deg)
 }
 
-#stic2 {
+#stic42 {
     top: 80px;
     left: 630px;
     transform: rotate(5deg)
 }
 
-#stic3 {
+#stic43 {
     top: 80px;
     left: 940px;
     transform: rotate(350deg)
 }
 
-#stic4 {
+#stic44 {
     top: 360px;
     left: 160px;
     transform: rotate(15deg)
 }
 
-#stic5 {
+#stic45 {
     top: 360px;
     left: 470px;
 }
 
-#stic6 {
+#stic46 {
     top: 360px;
     left: 780px;
     transform: rotate(340deg)
@@ -72,43 +72,43 @@
     line-height: 26px;
 }
 
-#text0 {
+#text40 {
     top: 190px;
     left: 75px;
     transform: rotate(357deg)
 }
 
-#text1 {
+#text41 {
     top: 160px;
     left: 390px;
     transform: rotate(17deg)
 }
 
-#text2 {
+#text42 {
     top: 180px;
     left: 700px;
     transform: rotate(2deg)
 }
 
-#text3 {
+#text43 {
     top: 180px;
     left: 1025px;
     transform: rotate(347deg)
 }
 
-#text4 {
+#text44 {
     top: 460px;
     left: 220px;
     transform: rotate(11deg)
 }
 
-#text5 {
+#text45 {
     top: 470px;
     left: 560px;
     transform: rotate(357deg)
 }
 
-#text6 {
+#text46 {
     top: 460px;
     left: 870px;
     transform: rotate(337deg)
