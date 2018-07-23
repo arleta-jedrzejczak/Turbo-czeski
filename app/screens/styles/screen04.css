@@ -17,11 +17,39 @@
     left: 0;
 }
 
+.notepad4 {
+    background-image: url('../../assets/images/notepad.png');
+    background-repeat: no-repeat;
+    z-index: 2;
+    width: 1300px;
+    height: 700px;
+    position: absolute;
+    top: 80px;
+    left: 400px;
+}
+
+.text4 {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    top: 200px;
+    left: 480px;
+    z-index: 4;
+    line-height: 27px;
+}
+
+.check4 {
+    position: absolute;
+    top: 450px;
+    left: 480px;
+    z-index: 4;
+}
+
 .sticker4 {
     position: absolute;
     width: 300px;
     height: 300px;
-    z-index: 2;
+    z-index: 3;
 }
 
 #stic40 {
@@ -68,7 +96,7 @@
     width: 150px;
     height: 150px;
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     line-height: 26px;
 }
 

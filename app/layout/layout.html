@@ -1,4 +1,4 @@
-<div ng-controller="layoutController" id="layout">
+<div ng-controller="layoutController" id="layout" class="layout">
 
     <div class="bar aboveBar">
         <p>{{currTitle}}</p>
@@ -14,8 +14,9 @@
                 <div class="buttonInsider fas fa-info" id="buttonInfo" ng-click="callLayout($event)"></div>
             </div>
             <div class="layoutSection hiddenSection" id="infoSection">
-                <div class="close fas fa-times"></div>
-                <div class="info">
+                <div class="close fas fa-times"  ng-click="callLayout($event)"></div>
+                <div class="info sectionInsider">
+                    <span>INFORMACJE</span><br><br>
                     <span>Witaj w interaktywnym szkoleniu "Turbo czeski"</span>
                 </div>
             </div>
@@ -24,8 +25,9 @@
                 <div class="buttonInsider fas fa-book" id="buttonDictionary" ng-click="callLayout($event)"></div>
             </div>
             <div class="layoutSection hiddenSection" id="dictionarySection">
-                <div class="close fas fa-times"></div>
-                <div class="dictionary">
+                <div class="close fas fa-times"  ng-click="callLayout($event)"></div>
+                <div class="dictionary sectionInsider">
+                        <span>SŁOWNIK</span><br><br>
                     <ul>
                         <li ng-repeat="item in dictionary">
                             <span lang="cs-CZ" xml:lang="cs-CZ">{{item.word}} - </span>
@@ -39,10 +41,11 @@
                 <div class="buttonInsider fas fa-map-signs" id="buttonMap" ng-click="callLayout($event)"></div>
             </div>
             <div class="layoutSection hiddenSection" id="mapSection">
-                <div class="close fas fa-times"></div>
-                <div class="map">
-                    <li ng-repeat="item in screenAll">
-                        <a href={{item.id}}>{{item.title}}</a>
+                <div class="close fas fa-times"  ng-click="callLayout($event)"></div>
+                <div class="map sectionInsider">
+                        <span>MAPA SZKOLENIA</span><br><br>
+                    <li class="mapBullets" ng-repeat="item in screenAll">
+                        <a class="mapLinks" href={{item.id}}>{{item.title}}</a>
                     </li>
                 </div>
             </div>
@@ -51,12 +54,13 @@
                 <div class="buttonInsider far fa-star" id="buttonPoints" ng-click="callLayout($event)"></div>
             </div>
             <div class="layoutSection hiddenSection" id="pointsSection">
-                <div class="close fas fa-times"></div>
-                <div class="points">
+                <div class="close fas fa-times"  ng-click="callLayout($event)"></div>
+                <div class="points sectionInsider">
+                    <span>PUNKTY</span><br><br>
                     <ul>
                         <li ng-repeat="item in screenAll">
                             <span>{{item.title}}: </span>
-                            <span>{{item.points}}</span>
+                            <span> {{item.points}}</span>
                         </li>
                     </ul>
                 </div>
@@ -66,9 +70,9 @@
                 <div class="buttonInsider fas fa-user" id="buttonCredits" ng-click="callLayout($event)"></div>
             </div>
             <div class="layoutSection hiddenSection"  id="creditsSection">
-                <div class="close fas fa-times"></div>
-                <div class="credits">
-                    
+                <div class="close fas fa-times"  ng-click="callLayout($event)"></div>
+                <div class="credits sectionInsider">
+                        <span>O AUTORZE</span><br><br>
                 </div>
             </div>
         </div>

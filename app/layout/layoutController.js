@@ -100,20 +100,13 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
     var button4 = document.getElementById('buttonPoints');
     var button5 = document.getElementById('buttonCredits');
     var layout = document.querySelector('#layoutContent');
+    var close = document.getElementsByClassName('close');
     var lastCurrent;
     var opened = false;
-    var close = document.getElementsByClassName('close');
 
-    var consoleText = function() {
-        TweenMax.fromTo(close, 0.5, {scale:2}, {scale:1, ease:Power1.easeOut});
+    var accentClose = function() {
+        TweenMax.fromTo(close, 1, { scale: 2, color: '#f00' }, { scale: 1, ease:Power4.easeInOut, color: '#fff' });
         timeline.paused(true);
-    }
-
-    //nie dziala, zly parametr
-    for(let i = 0; close.length > i; i++) {
-        close[i].addEventListener('click', function(){
-            $scope.callLayout(current);
-        })
     }
 
     var timeline = new TimelineMax();
@@ -122,8 +115,8 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
     TweenMax.to(layout, 2, { opacity: 1, display: 'block' });
 
     timeline.paused(true);
-    timeline.to(layout, 1, {x: 0, ease:Power4.easeOut, onComplete: consoleText});
-    timeline.to(layout, 1, {x: 430, ease:Power4.easeOut, onComplete: consoleText});
+    timeline.to(layout, 1, {x: 0, ease:Power4.easeOut, onComplete: accentClose });
+    timeline.to(layout, 1, {x: 430, ease:Power4.easeOut, onComplete: accentClose });
     timeline.repeat(-1);
     
     $scope.callLayout = function(event) {
@@ -131,6 +124,11 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
         _this.opened = false;
         let section = event.target.parentElement.nextElementSibling;
         let current = event.target;
+        if(event.target.classList[0] == 'close') {
+            section = event.target.parentElement;
+            current = event.target.parentElement.previousElementSibling;
+            _this.lastCurrent = current;
+        }
 
         if(timeline._paused) {
             checkStatus();

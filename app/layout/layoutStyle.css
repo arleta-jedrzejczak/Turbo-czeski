@@ -7,18 +7,21 @@
     }
 }
 
+.layout {
+    color: white;
+}
+
 .layoutSection {
     width: 430px;
     height: 720px;
     position: absolute;
-    background-color: aquamarine;
+    background-color: #006974;
     left: 850px;
     top: 0;
 }
 
 .bar {
     background-color: #0097A7;
-    color: white;
     text-transform: uppercase;
     text-align: center;
     font-size: 24px;
@@ -45,6 +48,11 @@
 
 .hiddenSection {
     display: none;
+}
+
+.sectionInsider {
+    margin: 10px 30px;
+    line-height: 29px;
 }
 
 .button {
@@ -78,6 +86,19 @@
 
 .buttonInsider:hover {
     animation: circle 1s infinite;
+}
+
+.mapBullets {
+    list-style-type: none;
+}
+
+.mapLinks {
+    text-decoration: none;
+    color: white;
+}
+
+.mapLinks:hover {
+    border-bottom: 1px solid white;
 }
 
 .close {
