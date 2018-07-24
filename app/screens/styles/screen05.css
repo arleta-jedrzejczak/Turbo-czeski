@@ -1,0 +1,145 @@
+.screen5 {
+    background-color: #f4cd68;
+    background-position: 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+}
+
+.screen5Bg {
+    background-image: url('../../assets/images/bg7.png');
+    background-repeat: no-repeat;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.notepad5 {
+    background-image: url('../../assets/images/notepad.png');
+    background-repeat: no-repeat;
+    z-index: 2;
+    width: 1300px;
+    height: 700px;
+    position: absolute;
+    top: 80px;
+    left: 400px;
+}
+
+.text5 {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    top: 230px;
+    left: 480px;
+    z-index: 3;
+    line-height: 27px;
+}
+
+.drag5 {
+    z-index: 3;
+    position: absolute;
+    width: 800px;
+    height: 350px;
+    top: 150px;
+    left: 300px;
+}
+
+.checkButton5 {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 1rem;
+  color: #424242;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  margin: 5px;
+  user-select: none;
+  border-radius: 2px;
+  transition: all .3s ease-out;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.225);color: #FFF;
+  background-color: #03a9f4;
+}
+
+.checkButton5:hover {
+  text-decoration: none;
+  box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
+  background-color: lighten(#03a9f4, 8%);
+}
+
+.dragables5 {
+    position: absolute;
+    z-index: 4;
+    width: 400px;
+}
+
+.dragWord5 {
+    font-weight: bold;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+#d2 {
+    top: -20px;
+    left: 8px;
+    transform: rotate(356deg);
+}
+
+#d1 {
+    top: 100px;
+    left: 14px;
+    transform: rotate(356deg);
+}
+
+#d5 {
+    top: 220px;
+    left: 20px;
+    transform: rotate(356deg);
+}
+
+#d6 {
+    top: 340px;
+    left: 26px;
+    transform: rotate(356deg);
+}
+
+#d3 {
+    top: 10px;
+    left: 415px;
+    transform: rotate(8deg);
+}
+
+#d4 {
+    top: 130px;
+    left: 390px;
+    transform: rotate(8deg);
+}
+
+#d7 {
+    top: 250px;
+    left: 375px;
+    transform: rotate(8deg);
+}
+
+.counter5 {
+    position: absolute;
+    top: 630px;
+    left: 1080px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 3;
+    color: white;
+}

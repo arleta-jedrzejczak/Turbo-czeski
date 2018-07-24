@@ -1,25 +1,25 @@
-<div ng-controller="screen05Controller">
-    <div class="screenBg">
-        <div class="exercise">
-            <p class="text">Wypróbuj nowe słówka w ćwiczeniach. Na początek dopasuj prawidłowe kategorie do wyrażeń.</p>
-
-            <div class="dragables" ng-repeat="drag in drags">
-                <p class="drag" lang="cs-CZ" xml:lang="cs-CZ">{{drag.title}}</p>
+<div ng-controller="screen05Controller" class="screen5" id="screen5">
+    <div class="screen5Bg" id="screen5Bg"></div>
+    <div id="notepad5" class="notepad5"></div>
+    <div class="exercise">
+        <p class="text5 order" id="text5">Wypróbuj nowe słówka w ćwiczeniach. Na początek dopasuj prawidłowe kategorie do wyrażeń.</p>
+        <div class="drag5" id="drag5">
+            <div class="dragables5" ng-repeat="drag in drags" id={{drag.name}} class="drag">
+                <p class="dragWord5" lang="cs-CZ" xml:lang="cs-CZ">{{drag.title}}</p>
                 <label>
-                    <input type="button" id="greetings" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton" value="Powitania">
+                    <input type="button" id="greetings" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton5" value="Powitania">
                 </label>
                 <label>
-                    <input type="button" id="goodbyes" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton" value="Pożegnania">
+                    <input type="button" id="goodbyes" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton5" value="Pożegnania">
                 </label>
                 <label>
-                    <input type="button" id="behaviours" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton" value="Zwroty grzecznościowe">
+                    <input type="button" id="behaviours" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton5" value="Zwroty grzecznościowe">
                 </label>
             </div>
-
-            <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
-            <p>Twój wynik to: {{points}}</p>
-
         </div>
+        <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
+        <p class="counter5">Twój wynik to: {{points}}</p>
+
     </div>
 </div>
         
