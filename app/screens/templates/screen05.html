@@ -7,18 +7,18 @@
             <div class="dragables5" ng-repeat="drag in drags" id={{drag.name}} class="drag">
                 <p class="dragWord5" lang="cs-CZ" xml:lang="cs-CZ">{{drag.title}}</p>
                 <label>
-                    <input type="button" id="greetings" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton5" value="Powitania">
+                    <input type="button" id="greetings" ng-click="checkCategory($event)" name={{drag.name}} class="btn checkButton5" value="Powitania">
                 </label>
                 <label>
-                    <input type="button" id="goodbyes" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton5" value="Pożegnania">
+                    <input type="button" id="goodbyes" ng-click="checkCategory($event)" name={{drag.name}} class="btn checkButton5" value="Pożegnania">
                 </label>
                 <label>
-                    <input type="button" id="behaviours" ng-click="checkCategory($event)" name={{drag.name}} class="checkButton5" value="Zwroty grzecznościowe">
+                    <input type="button" id="behaviours" ng-click="checkCategory($event)" name={{drag.name}} class="btn checkButton5" value="Zwroty grzecznościowe">
                 </label>
             </div>
         </div>
-        <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
-        <p class="counter5">Twój wynik to: {{points}}</p>
+        <button class="submit btn" id="submit5" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
+        <p class="counter" id="counter5">Twój wynik to: {{points}}</p>
 
     </div>
 </div>

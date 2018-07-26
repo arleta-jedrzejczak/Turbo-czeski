@@ -18,7 +18,7 @@ myApp.controller('screen04Controller', ['$scope', function($scope){
     const text = document.getElementById('text4');
     const check = document.getElementById('check4');
 
-    var timeline4 = new TimelineMax({onComplete: $scope.accentChevron});
+    var timeline4 = new TimelineMax({});
 
     TweenMax.set(screen4Bg, {opacity: 0});
     TweenMax.set(notepad, {opacity: 0});

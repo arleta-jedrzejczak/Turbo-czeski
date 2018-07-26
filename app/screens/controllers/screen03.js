@@ -23,7 +23,7 @@ myApp.controller('screen03Controller', ['$scope', function($scope){
     const thanks = document.getElementById('thanks');
     const sorry = document.getElementById('sorry');
 
-    var timeline3 = new TimelineMax({onComplete: $scope.accentChevron});
+    var timeline3 = new TimelineMax({});
 
     TweenMax.set(screen3Bg, {opacity: 0});
     TweenMax.set(desk, {opacity: 0, x: -500});

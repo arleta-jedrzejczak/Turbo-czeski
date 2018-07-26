@@ -1,95 +1,95 @@
-<div ng-controller="screen06Controller">
-    <div class="screenBg">
-        <div class="exercise">
-            <p class="text">Dopasuj prawidłowe tłumaczenie do frazy, wpisując odpowiednią literę.</p>
-            <div>
+<div ng-controller="screen06Controller" class="screen6" id="screen6">
+    <div class="screen6Bg" id="screen6Bg"></div>
+    <object class="tablet6" id="tablet6" object id="tablet6" type="image/svg+xml" data="app/assets/images/tablet.svg"></object>
+    <div class="exercise">
+        <p class="text">Dopasuj prawidłowe tłumaczenie do frazy, wpisując odpowiednią literę.</p>
+        <div>
 
-                <div class="czechWords">
-                    <div>
-                        <p>
-                            <span lang="cs-CZ" xml:lang="cs-CZ">Dobré ráno</span>
-                            <span class="letter">A</span>
-                        </p>
-                    </div>
+            <div class="czechWords">
+                <div>
+                    <p>
+                        <span lang="cs-CZ" xml:lang="cs-CZ">Dobré ráno</span>
+                        <span class="letter">A</span>
+                    </p>
                 </div>
-                <div class="czechWords">
-                    <div>
-                        <p>
-                            <span lang="cs-CZ" xml:lang="cs-CZ">Ahoj</span>
-                            <span class="letter">B</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="czechWords">
-                    <div>
-                        <p>
-                            <span lang="cs-CZ" xml:lang="cs-CZ">Omlouvám se</span>
-                            <span class="letter">C</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="czechWords">
-                    <div>
-                        <p>
-                            <span lang="cs-CZ" xml:lang="cs-CZ">Jmenuji se</span>
-                            <span class="letter">D</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="czechWords">
-                    <div>
-                        <p>
-                            <span lang="cs-CZ" xml:lang="cs-CZ">Dobrou noc</span>
-                            <span class="letter">E</span>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="poslishWords">
-                    <div>
-                        <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
-                            <span>Nazywam się</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="poslishWords">
-                    <div>
-                        <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
-                            <span>Przepraszam</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="poslishWords">
-                    <div>
-                        <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
-                            <span>Dobranoc</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="poslishWords">
-                    <div>
-                        <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
-                            <span>Dzień dobry</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="poslishWords">
-                    <div>
-                        <p>
-                            <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
-                            <span>Cześć</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
-                <p>Twój wynik to: {{points}}</p>
-
             </div>
+            <div class="czechWords">
+                <div>
+                    <p>
+                        <span lang="cs-CZ" xml:lang="cs-CZ">Ahoj</span>
+                        <span class="letter">B</span>
+                    </p>
+                </div>
+            </div>
+            <div class="czechWords">
+                <div>
+                    <p>
+                        <span lang="cs-CZ" xml:lang="cs-CZ">Omlouvám se</span>
+                        <span class="letter">C</span>
+                    </p>
+                </div>
+            </div>
+            <div class="czechWords">
+                <div>
+                    <p>
+                        <span lang="cs-CZ" xml:lang="cs-CZ">Jmenuji se</span>
+                        <span class="letter">D</span>
+                    </p>
+                </div>
+            </div>
+            <div class="czechWords">
+                <div>
+                    <p>
+                        <span lang="cs-CZ" xml:lang="cs-CZ">Dobrou noc</span>
+                        <span class="letter">E</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="poslishWords">
+                <div>
+                    <p>
+                        <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
+                        <span>Nazywam się</span>
+                    </p>
+                </div>
+            </div>
+            <div class="poslishWords">
+                <div>
+                    <p>
+                        <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
+                        <span>Przepraszam</span>
+                    </p>
+                </div>
+            </div>
+            <div class="poslishWords">
+                <div>
+                    <p>
+                        <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
+                        <span>Dobranoc</span>
+                    </p>
+                </div>
+            </div>
+            <div class="poslishWords">
+                <div>
+                    <p>
+                        <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
+                        <span>Dzień dobry</span>
+                    </p>
+                </div>
+            </div>
+            <div class="poslishWords">
+                <div>
+                    <p>
+                        <input type="text" class="input" ng-keyup="checkLetter($event)" ng-keypress="countLetters($event)"/>
+                        <span>Cześć</span>
+                    </p>
+                </div>
+            </div>
+            
+            <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
+            <p>Twój wynik to: {{points}}</p>
+
         </div>
     </div>
 </div>
