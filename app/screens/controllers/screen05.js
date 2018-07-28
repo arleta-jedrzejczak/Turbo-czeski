@@ -13,6 +13,7 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
     ]
 
     const checkButton = document.getElementsByClassName('checkButton5');
+    const submit = document.getElementById('submit5');
     $scope.points = 0;
     $scope.disableBtn = true;
 
@@ -41,6 +42,9 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
 
         if(helperPoints == $scope.drags.length) {
             $scope.disableBtn = false;
+            submit.style.color = 'white';
+            submit.style.cursor = 'pointer';
+            submit.style.backgroundColor = '#FF5722';
         }
 
     }
@@ -66,7 +70,6 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
     const notepad = document.getElementById('notepad5');
     const text = document.getElementById('text5');
     const drag = document.getElementById('drag5');
-    const submit = document.getElementById('submit5');
     const counter = document.getElementById('counter5');
 
     var timeline5 = new TimelineMax({});
@@ -75,8 +78,8 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
     TweenMax.set(notepad, {opacity: 0, x: 500});
     TweenMax.set(text, {opacity: 0, y: 300});
     TweenMax.set(drag, {opacity: 0, scale: 3});
-    TweenMax.set(submit, {opacity: 0});
-    TweenMax.set(counter, {opacity: 0});
+    TweenMax.set(submit, {display: 'none', opacity: 0});
+    TweenMax.set(counter, {display: 'none', opacity: 0});
 
     TweenMax.to(screen5Bg, 1, { opacity: 1 });
 
@@ -87,7 +90,7 @@ myApp.controller('screen05Controller', ['$scope', function($scope){
     timeline5.to(notepad, 1, {opacity: 0, ease:Power4.easeInOut}, '+=0.5');
     timeline5.to(screen5Bg, 2, {opacity: 1, display: 'block', ease:Power4.easeInOut});
     timeline5.to(drag, 1, {opacity: 1, scale: 1, ease: Bounce.easeOut});
-    timeline5.to(submit, 1, {opacity: 1, ease:Power4.easeInOut}, '+=0.5');
-    timeline5.to(counter, 1, {opacity: 1, ease:Power4.easeInOut}, "-=1");
+    timeline5.to(submit, 1, {opacity: 1, display: 'block', ease:Power4.easeInOut}, '+=0.5');
+    timeline5.to(counter, 1, {opacity: 1, display: 'block', ease:Power4.easeInOut}, "-=1");
 
 }]);
