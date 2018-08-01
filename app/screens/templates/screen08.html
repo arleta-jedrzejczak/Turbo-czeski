@@ -1,20 +1,22 @@
-<div ng-controller="screen08Controller">
-    <div class="screenBg">
+<div ng-controller="screen08Controller" class="screen8" id="screen8">
+        <div class="screen8Bg" id="screen8Bg"></div>
+        <object class="laptop8" id="laptop8" type="image/svg+xml" data="app/assets/images/laptop.svg"></object>
+        <div class="desktop8" id="desktop8"></div>
         <div class="exercise">
-            <p class="text">Uzupełnij dialog układając wyrażenia z rozsypanych liter umieszczonych w nawiasach. Jeżeli nie możesz skorzystać z czeskiej klawiatury, wpisz słowa bez czeskich znaków (np. zamiast "dobrý večer" możesz napisać "dobry vecer").</p>
+            <p class="text8 order" id="text8">Uzupełnij dialog układając wyrażenia z rozsypanych liter umieszczonych w nawiasach. Jeżeli nie możesz skorzystać z czeskiej klawiatury, wpisz słowa bez czeskich znaków (np. zamiast "dobrý večer" możesz napisać "dobry vecer").</p>
 
-            <div class="dialog" lang="cs-CZ" xml:lang="cs-CZ">
-                <p class="sentence">- Ahoj! Jmenuji se Adam. Jak se <input type="text" class="words" ng-keyup="checkValue($event)" name="jmenujes" ng-keypress="countLetters($event)"/> (UŠJENMEJ)?</p>
-                <p class="sentence">- <input type="text" class="words" ng-keyup="checkValue($event)" name="jmenuji" ng-keypress="countLetters($event)"/> (NJUMIEJ) se Anna.</p>
-                <p class="sentence">- Ahoj Anna. <input type="text" class="words" name="odkud" ng-keyup="checkValue($event)" ng-keypress="countLetters($event)"/> (DUDKO) jsi?</p>
-                <p class="sentence">- Jsem z Polska. Já <input type="text" name="mluvim" class="words" ng-keyup="checkValue($event)" ng-keypress="countLetters($event)"/> (LWMÍUM) trochu česky. Odkud jsi?</p>
-                <p class="sentence">- <input type="text" class="words" ng-keyup="checkValue($event)" name="jsem" ng-keypress="countLetters($event)"/> (MEJS) z České republiky.</p>
-                <p class="sentence">- <input type="text" class="words" name="dekuji" ng-keyup="checkValue($event)" ng-keypress="countLetters($event)"/> (IJKUĚD) Adam. Na <input type="text" ng-keypress="countLetters($event)" class="words" name="shledanou" ng-keyup="checkValue($event)"/> (ALNEDOHUS).</p>
-                <p class="sentence">- Ahoj Anna.</p>
+            <div class="dialog8" lang="cs-CZ" xml:lang="cs-CZ">
+                <p class="sentence8"><span class="bold">–</span> Ahoj! Jmenuji se Adam. Jak se <input type="text" class="words8" ng-keyup="checkValue($event)" name="jmenujes" ng-keypress="countLetters($event)"/> (<span class="bold">UŠJENMEJ</span>)?</p>
+                <p class="sentence8"><span class="bold">–</span> <input type="text" class="words8" ng-keyup="checkValue($event)" name="jmenuji" ng-keypress="countLetters($event)"/> (<span class="bold">NJUMIEJ</span>) se Anna.</p>
+                <p class="sentence8"><span class="bold">–</span> Ahoj Anna. <input type="text" class="words8" name="odkud" ng-keyup="checkValue($event)" ng-keypress="countLetters($event)"/> (<span class="bold">DUDKO</span>) jsi?</p>
+                <p class="sentence8"><span class="bold">–</span> Jsem z Polska. Já <input type="text" name="mluvim" class="words8" ng-keyup="checkValue($event)" ng-keypress="countLetters($event)"/> (<span class="bold">LWMÍUM</span>) trochu česky. Odkud jsi?</p>
+                <p class="sentence8"><span class="bold">–</span> <input type="text" class="words8" ng-keyup="checkValue($event)" name="jsem" ng-keypress="countLetters($event)"/> (<span class="bold">MEJS</span>) z České republiky.</p>
+                <p class="sentence8"><span class="bold">–</span> <input type="text" class="words8" name="dekuji" ng-keyup="checkValue($event)" ng-keypress="countLetters($event)"/> (<span class="bold">IJKUĚD</span>) Adam. Na <input type="text" ng-keypress="countLetters($event)" class="words8" name="shledanou" ng-keyup="checkValue($event)"/> (<span class="bold">ALNEDOHUS</span>).</p>
+                <p class="sentence8"><span class="bold">–</span> Ahoj Anna.</p>
             </div>
 
-            <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
-            <p>Twój wynik to: {{points}}</p>
+            <button class="submit btn" id="submit8" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
+            <p class="counter" id="counter8">Twój wynik to: {{points}}</p>
 
         </div>
     </div>

@@ -40,21 +40,21 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 
 }]);
 
-// myApp.run(function(){
-
-//     console.log('hhhhhhhhhhhh');
-
-// });
-
 myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http', '$route', function($scope, $route, $location, $http, $rootScope){
 
     $scope.checkTotalPoints = function(points, screen) { 
         sessionStorage.setItem(screen, points);
+        $scope.updatePoints(screen, points);
     }
 
     $scope.accentChevron = function() {
         let chevron = document.getElementsByClassName('fire');
         TweenMax.fromTo(chevron, 1, { scale: 2, color: '#f00' }, { scale: 1, ease:Power4.easeInOut, color: '#fff' });
+    }
+
+    $scope.updatePoints = function(screen, points) {
+        let pointer = document.getElementById(screen)
+        pointer.innerText = points;
     }
 
 }]);

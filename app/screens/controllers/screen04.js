@@ -2,7 +2,7 @@ myApp.controller('screen04Controller', ['$scope', function($scope){
 
     let currentScreen = 4;
 
-    $scope.sentences = [
+    $scope.sentences4 = [
         {cz: "Mluvíš český?", pl: "Mówisz po czesku?", id: 'stic40', num: 'text40'},
         {cz: "Já mluvím trochu česky.", pl: "Mówię trochę po czesku.", id: 'stic41', num: 'text41'},
         {cz: "Mluvím anglicky.", pl: "Mówię po angielsku.", id: 'stic42', num: 'text42'},

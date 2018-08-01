@@ -1,23 +1,28 @@
-<div ng-controller="screen07Controller">
-    <div class="screenBg">
-        <div class="exercise">
-            <p class="text">Czy odpowiedź na pytanie jest prawidłowa? Wybierz opcję "prawda" dla dobrej odpowiedzi lub "fałsz" dla błędnej.</p>
+<div ng-controller="screen07Controller" class="screen7" id="screen7">
+    <div class="screen7Bg" id="screen7Bg"></div>
+    <div id="notepad7" class="notepad7"></div>
+    <div class="exercise">
+        <p class="text7 order" id="text7">Czy odpowiedź na pytanie jest prawidłowa? Wybierz opcję "prawda" dla dobrej odpowiedzi lub "fałsz" dla błędnej.</p>
 
-            <div class="sentence" ng-repeat="sentence in sentences">
-                <p class="question" lang="cs-CZ" xml:lang="cs-CZ">{{sentence.question}}</p>
-                <p class="answear" lang="cs-CZ" xml:lang="cs-CZ">{{sentence.answear}}</p>
-                <label>
-                    <input type="radio" ng-click="checkSubmit()" name={{sentence.name}} class="checkingPoints" value="true">prawda
-                </label>
-                <label>
-                    <input type="radio" ng-click="checkSubmit()" name={{sentence.name}} class="checkingPoints" value="false">fałsz
-                </label>
+        <div id="cards7">
+            <div class="sentence" ng-repeat="sentence in sentences7">
+                <object class="sticker7" id={{sentence.id}} type="image/svg+xml" data="app/assets/images/sticker.svg"></object>
+                <div class="container7" id={{sentence.num}}>
+                    <p class="question" lang="cs-CZ" xml:lang="cs-CZ">{{sentence.question}}</p>
+                    <p class="answear" lang="cs-CZ" xml:lang="cs-CZ">{{sentence.answear}}</p>
+                    <label>
+                        <input type="radio" ng-click="checkSubmit()" name={{sentence.name}} class="checkingPoints" value="true">prawda
+                    </label>
+                    <label>
+                        <input type="radio" ng-click="checkSubmit()" name={{sentence.name}} class="checkingPoints" value="false">fałsz
+                    </label>
+                </div>
             </div>
-
-            <button class="submit" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
-            <p>Twój wynik to: {{points}}</p>
-
         </div>
+
+        <button class="submit btn" id="submit7" ng-disabled="disableBtn" ng-click="checkExercise()">Sprawdź</button>
+        <p class="counter" id="counter7">Twój wynik to: {{points}}</p>
+
     </div>
 </div>
         
