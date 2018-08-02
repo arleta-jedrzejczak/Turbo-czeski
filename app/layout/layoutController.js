@@ -94,7 +94,8 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
     }
 
     $scope.restartGame = function() {
-        sessionStorage.clear();
+        $window.location.reload();
+        // for(let i = 0; )
     }
     
 
