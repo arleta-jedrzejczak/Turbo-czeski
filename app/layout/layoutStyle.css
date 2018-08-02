@@ -33,6 +33,12 @@
     z-index: 6;
 }
 
+.screenNum {
+    position: relative;
+    bottom: 5px;
+    left: -20px;
+}
+
 .bottomLinks {
     color: white;
 }
@@ -122,4 +128,22 @@
 
 .buttonCredits {
     top: 300px;
+}
+
+.restart {
+    position: relative;
+    bottom: 8px;
+    left: -200px;
+    cursor: 'pointer';
+    background-color: #006974;
+}
+
+.restart:hover {
+    text-decoration: none;
+    background-color: '#FF5722';
+}
+
+.restartLink {
+    text-decoration: none;
+    color: white;
 }

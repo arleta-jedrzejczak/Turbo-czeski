@@ -92,6 +92,10 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
         }
         return value;
     }
+
+    $scope.restartGame = function() {
+        sessionStorage.clear();
+    }
     
 
     var button1 = document.getElementById('buttonInfo');
