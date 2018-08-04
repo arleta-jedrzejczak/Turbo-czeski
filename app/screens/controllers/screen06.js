@@ -3,7 +3,7 @@ myApp.controller('screen06Controller', ['$scope', function($scope){
     let currentScreen = 6;
 
     $scope.points = 0;
-    const inputs = document.getElementsByClassName('input');
+    const inputs = document.getElementsByClassName('input6');
     const submit = document.getElementById('submit6');
     const results = ["D", "C", "E", "A", "B"];
     $scope.disableBtn = true;

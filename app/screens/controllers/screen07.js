@@ -2,7 +2,7 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
 
     let currentScreen = 7;
 
-    $scope.sentences7 = [
+    $scope.sentences = [
         {question: "– Mluvíš český?", answear: "– Mluvím anglicky.", name: "q1", result: "false", id: 'stic70', num: 'text70'},
         {question: "– Jak se jmenuješ?", answear: "– Jmenuji se Anna.", name: "q2", result: "true", id: 'stic71', num: 'text71'},
         {question: "– Odkud jsi?", answear: "– Omlouvám se.", name: "q3", result: "false", id: 'stic72', num: 'text72'}
@@ -25,7 +25,7 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
             }
         }
 
-        if(helperPoints == $scope.sentences7.length) {
+        if(helperPoints == $scope.sentences.length) {
             $scope.disableBtn = false;
             submit.style.color = 'white';
             submit.style.cursor = 'pointer';
@@ -46,7 +46,7 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
         }
 
         for(var i = 0; i < helperFinalArray.length; i++) {
-            if(helperFinalArray[i].value == $scope.sentences7[i].result) {
+            if(helperFinalArray[i].value == $scope.sentences[i].result) {
                 $scope.points++;
             }
             else {
@@ -76,8 +76,8 @@ myApp.controller('screen07Controller', ['$scope', function($scope){
     timeline7.to(screen7Bg, 2, {opacity: 0, display: 'none', ease:Power4.easeInOut}, 1);
     timeline7.to(notepad, 1, {opacity: 1, ease:Power4.easeInOut});
     timeline7.to(text, 1, {opacity: 1, y: 0, ease:Power4.easeInOut});
-    timeline7.to(text, 1, {opacity: 0, y: 200, ease:Power4.easeInOut}, "+=4");
-    timeline7.to(notepad, 0.2, {opacity: 0, ease:Power4.easeInOut}, '+=0.5');
+    timeline7.to(text, 1, {opacity: 0, y: 200, display: 'none', ease:Power4.easeInOut}, "+=4");
+    timeline7.to(notepad, 0.2, {opacity: 0, display: 'none', ease:Power4.easeInOut}, '+=0.5');
     timeline7.to(cards, 1, {opacity: 1, y: -35, ease: Back.easeOut.config(1.7)});
     timeline7.to(submit, 1, {display: 'block', opacity: 1, ease:Power4.easeInOut}, '+=0.5');
     timeline7.to(counter, 1, {display: 'block', opacity: 1, ease:Power4.easeInOut}, "-=1");

@@ -60,7 +60,7 @@
 
 .text91 {
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 160px;
     z-index: 2;
     text-align: center;
@@ -75,7 +75,6 @@
     padding-top: 20px;
     color: #171616;
     overflow: hidden;
-    border-right: .15em solid #171616;
     white-space: nowrap;
     margin: 0 auto;
     font-weight: thin;
@@ -86,7 +85,7 @@
 
 .text93 {
     position: absolute;
-    top: 90px;
+    top: 115px;
     width: 600px;
     left: -40px;
     z-index: 2;

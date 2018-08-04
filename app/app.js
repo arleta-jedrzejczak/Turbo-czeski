@@ -45,6 +45,8 @@ myApp.controller('appController', ['$rootScope', '$scope', '$location', '$http',
     $scope.checkTotalPoints = function(points, screen) { 
         sessionStorage.setItem(screen, points);
         $scope.updatePoints(screen, points);
+        let chevron = document.getElementsByClassName('fire');
+        TweenMax.fromTo(chevron, 1, { scale: 2, color: '#f00' }, { scale: 1, ease:Power4.easeInOut, color: '#fff' });
     }
 
     $scope.accentChevron = function() {
