@@ -57,12 +57,10 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
     function getTitle(screen) {
         let rightScreen = screen - 1;
         $scope.currTitle = $scope.screenAll[rightScreen].title;
-        console.log($scope.screenAll[rightScreen].title);
     }
 
     function checkScreen() {
         curr = checkChars($location.$$path, '/');
-        console.log(curr)
         curr = Number(curr);
         prevScreen = curr - 1;
         nextScreen = curr + 1;
