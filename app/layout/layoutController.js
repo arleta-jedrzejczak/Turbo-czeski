@@ -70,9 +70,9 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
         if(curr == 9) {
             nextScreen = null;
         }
-        $scope.currScreen = 'Turbo-czeski/' + curr;
-        $scope.prevScreen = 'Turbo-czeski/' + prevScreen;
-        $scope.nextScreen = 'Turbo-czeski/' + nextScreen;
+        $scope.currScreen = '#/' + curr;
+        $scope.prevScreen = '#/' + prevScreen;
+        $scope.nextScreen = '#/' + nextScreen;
         getTitle(curr);
     }
 
@@ -94,8 +94,7 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
     }
 
     $scope.restartGame = function() {
-        $window.location.reload();
-        // for(let i = 0; )
+        sessionStorage.setItem.clear();
     }
     
 
