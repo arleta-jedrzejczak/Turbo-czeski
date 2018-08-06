@@ -1,4 +1,4 @@
-myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', '$window', function($scope, $http, $route, $location, $window){
+myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', function($scope, $http, $route, $location){
 
     $scope.screenAll = [];
     var _this = this;
