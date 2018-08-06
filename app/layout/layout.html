@@ -7,11 +7,11 @@
     <div class="bar bottomBar">
         <div class="btn restart" ng-click="restartGame()"><a class="restartLink" href='#1'>RESTART</a></div>
         <span class="screenNum">
-            <a href={{prevScreen}}>
+            <a href=#{{prevScreen}}>
                 <i class="fas fa-chevron-left bottomLinks"></i>
             </a>
             <span class="bottomLinks">  EKRAN  {{currScreen}} </span>
-            <a href={{nextScreen}}>
+            <a href=#{{nextScreen}}>
                 <i class="fas fa-chevron-right bottomLinks fire"></i>
             </a>
         </span>
@@ -54,7 +54,7 @@
                 <div class="map sectionInsider">
                         <span>MAPA SZKOLENIA</span><br><br>
                     <li class="mapBullets" ng-repeat="item in screenAll">
-                        <a class="mapLinks" href=#/{{item.id}}>{{item.id}}. {{item.title}}</a>
+                        <a class="mapLinks" href=#{{item.id}}>{{item.id}}. {{item.title}}</a>
                     </li>
                 </div>
             </div>
