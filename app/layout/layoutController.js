@@ -70,9 +70,9 @@ myApp.controller('layoutController', ['$scope', '$http', '$route', '$location', 
         if(curr == 9) {
             nextScreen = null;
         }
-        $scope.currScreen = curr;
-        $scope.prevScreen = prevScreen;
-        $scope.nextScreen = nextScreen;
+        $scope.currScreen = 'Turbo-czeski/' + curr;
+        $scope.prevScreen = 'Turbo-czeski/' + prevScreen;
+        $scope.nextScreen = 'Turbo-czeski/' + nextScreen;
         getTitle(curr);
     }
 

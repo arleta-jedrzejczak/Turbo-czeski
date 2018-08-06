@@ -3,35 +3,35 @@ var myApp = angular.module('myApp', ['ngRoute']).component('layout', {templateUr
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 
     $routeProvider
-        .when('/1', {
+        .when('Turbo-czeski/1', {
             templateUrl: 'app/screens/templates/screen01.html'
         })
-        .when('/2', {
+        .when('Turbo-czeski/2', {
             templateUrl: 'app/screens/templates/screen02.html'
         })
-        .when('/3', {
+        .when('Turbo-czeski/3', {
             templateUrl: 'app/screens/templates/screen03.html'
         })
-        .when('/4', {
+        .when('Turbo-czeski/4', {
             templateUrl: 'app/screens/templates/screen04.html'
         })
-        .when('/5', {
+        .when('Turbo-czeski/5', {
             templateUrl: 'app/screens/templates/screen05.html'
         })
-        .when('/6', {
+        .when('Turbo-czeski/6', {
             templateUrl: 'app/screens/templates/screen06.html'
         })
-        .when('/7', {
+        .when('Turbo-czeski/7', {
             templateUrl: 'app/screens/templates/screen07.html'
         })
-        .when('/8', {
+        .when('Turbo-czeski/8', {
             templateUrl: 'app/screens/templates/screen08.html'
         })
-        .when('/9', {
+        .when('Turbo-czeski/9', {
             templateUrl: 'app/screens/templates/screen09.html'
         })
         .otherwise({
-            redirectTo: '/1'
+            redirectTo: 'Turbo-czeski/1'
         })
     $locationProvider.html5Mode({
         enabled: true,
