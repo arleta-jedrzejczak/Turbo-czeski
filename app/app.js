@@ -33,10 +33,10 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
         .otherwise({
             redirectTo: '/1'
         })
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-      }).hashPrefix('');
+    // $locationProvider.html5Mode({
+    //     enabled: true,
+    //     requireBase: false
+    //   }).hashPrefix('');
 
 }]);
 
