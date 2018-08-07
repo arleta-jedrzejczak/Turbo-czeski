@@ -1,5 +1,6 @@
 # Turbo-czeski
 > Turbo-czeski is a e-learning mini course of Czech language.
+Link to demo: https://laililang.github.io/Turbo-czeski
 
 ## Table of contents
 * [General info](#general-info)
@@ -11,7 +12,7 @@
 * [Contact](#contact)
 
 ## General info
-The motivation for writing this project was creating useful web application and leraning new technologies - in this case for me those were AgularJS and GreenSock (GSAP).
+My motivation for writing this project was creating useful web application and learning new technologies, in this case for me: AgularJS and GreenSock (GSAP).
 The purpose of the Turbo-czeski is showing how nice and fun might be learning new languages.
 
 ## Screenshots
@@ -24,7 +25,6 @@ The purpose of the Turbo-czeski is showing how nice and fun might be learning ne
 
 ## Setup
 Install: use local server like XAMP or Mongoose
-Link to demo: https://laililang.github.io/Turbo-czeski
 
 ## Status
 Project is finished :)
