@@ -16,7 +16,9 @@ My motivation for writing this project was creating useful web application and l
 The purpose of the Turbo-czeski is showing how nice and fun might be learning new languages.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![screenshot1](./img/tc1.png)
+![screenshot2](./img/tc3.png)
+![screenshot3](./img/tc2.png)
 
 ## Technologies
 * AngularJS - version 1.6.10
