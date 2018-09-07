@@ -1,6 +1,6 @@
 # Turbo-czeski
 > Turbo-czeski is a e-learning mini course of Czech language.
-Link to demo: https://laililang.github.io/Turbo-czeski
+Link to demo: https://arleta-jedrzejczak.github.io/Turbo-czeski
 
 ## Table of contents
 * [General info](#general-info)
@@ -35,4 +35,4 @@ Project is finished :)
 This project is licensed under the terms of the MIT license.
 
 ## Contact
-Created by Arleta Jędrzejczak(https://laililang.github.com/Memory/) - feel free to contact me!
+Created by Arleta Jędrzejczak(https://arleta-jedrzejczak.github.com/Memory/) - feel free to contact me!
